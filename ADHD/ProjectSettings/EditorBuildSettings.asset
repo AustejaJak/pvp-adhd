@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 30a381178ec361240ba919d1805b99a0
+  - enabled: 1
+    path: Assets/Scenes/ShadowGame.unity
+    guid: 3d160d2203002dd4b8d3712bec96e2c2
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 374ad87729529c74fb79ef81ba2e893e, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 68121ce2d63c6d848b2c69dc05f705d1, type: 2}
