@@ -102,6 +102,11 @@ public class SceneController : MonoBehaviour
         _firstRevealed = null;
         _secondRevealed = null;
 
+        if(_score == 4)
+        {
+            SceneManager.LoadScene("Labirinth");
+        }
+
     }
 
     public void Restart()
