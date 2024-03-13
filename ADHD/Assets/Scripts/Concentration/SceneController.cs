@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 public class SceneController : MonoBehaviour
 {
 
-    public const int gridRows = 2;
-    public const int gridCols = 4;
-    public const float offsetX = 4f;
-    public const float offsetY = 5f;
+    public const int gridRows = 4;
+    public const int gridCols = 2;
+    public const float offsetX = 2f;
+    public const float offsetY = 2f;
 
     [SerializeField] private MainCard originalCard;
     [SerializeField] private Sprite[] images;
