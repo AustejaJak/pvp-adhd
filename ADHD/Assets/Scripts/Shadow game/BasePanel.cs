@@ -9,6 +9,7 @@ public class BasePanel : MonoBehaviour
     private Canvas canvas;
     private int panelSortingOrder;
     private List<GameObject> slots = new List<GameObject>();
+    public float scale; 
 
     public void SpawnGrid(List<GameObject> hiddenItems)
     {
@@ -42,7 +43,7 @@ public class BasePanel : MonoBehaviour
                 RectTransform rectTransform = obj.AddComponent<RectTransform>();
                 rectTransform.SetParent(panelTransform, false);
                 rectTransform.localPosition = localPosition;
-                rectTransform.localScale *= 2f;
+                rectTransform.localScale *= scale;
                 rectTransform.eulerAngles = rotation.eulerAngles;
 
                 Image imageComponent = obj.AddComponent<Image>();
