@@ -4,26 +4,25 @@ using UnityEngine;
 
 public class ClickOnItem : MonoBehaviour
 {
-    public GameObject barObject;
-    public Sprite normalSprite; 
-    private SpriteRenderer barSpriteRenderer; 
+    public bool isHiden = false;
+    public int objectId;
+    private SpriteRenderer gameObjectSpriteRenderer; 
+    public BasePanel basePanelScript;
+    public GameEvents gameEventsScript;
 
     void Start()
     {
-        barSpriteRenderer = barObject.GetComponent<SpriteRenderer>();
-        if (barSpriteRenderer != null)
-        {
-            barSpriteRenderer.sprite = normalSprite;
-            barSpriteRenderer.color = Color.black;
-        }
+        gameObjectSpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void OnMouseDown()
     {
-        if (barSpriteRenderer != null && normalSprite != null)
+        if(isHiden)
         {
-            barSpriteRenderer.color = Color.white;
+            gameObjectSpriteRenderer.color = Color.black;
+            basePanelScript.SetWhite(objectId);
+            gameEventsScript.AddPoint();
+            isHiden = false;
         }
-        Destroy(gameObject);
     }
 }
