@@ -7,9 +7,9 @@ public class SceneController : MonoBehaviour
 {
 
     public const int gridRows = 4;
-    public const int gridCols = 2;
-    public const float offsetX = 2f;
-    public const float offsetY = 2f;
+    public const int gridCols = 3;
+    public const float offsetX = 1.5f;
+    public const float offsetY = 1.5f;
 
     [SerializeField] private MainCard originalCard;
     [SerializeField] private Sprite[] images;
@@ -18,7 +18,7 @@ public class SceneController : MonoBehaviour
     {
         Vector3 startPos = originalCard.transform.position; //The position of the first card. All other cards are offset from here.
 
-        int[] numbers = { 0, 0, 1, 1, 2, 2, 3, 3 };
+        int[] numbers = { 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5};
         numbers = ShuffleArray(numbers); //This is a function we will create in a minute!
 
         for (int i = 0; i < gridCols; i++)
@@ -89,7 +89,7 @@ public class SceneController : MonoBehaviour
         if (_firstRevealed.id == _secondRevealed.id)
         {
             _score++;
-            scoreLabel.text = "Score: " + _score;
+            scoreLabel.text = "" + _score;
         }
         else
         {
@@ -102,7 +102,7 @@ public class SceneController : MonoBehaviour
         _firstRevealed = null;
         _secondRevealed = null;
 
-        if(_score == 4)
+        if(_score == 6)
         {
             SceneManager.LoadScene("Labirinth");
         }
