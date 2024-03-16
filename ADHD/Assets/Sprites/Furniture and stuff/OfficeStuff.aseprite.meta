@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5a4c5b89929ee8a4294516783a763f13
+guid: 533ef1c42a7e08848b0e5fff62239d12
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638461907324504339
+  platformSettingsDirtyTick: 638461907709447699
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Cabinets
+  - name: OfficeStuff
     originalName: 
-    pivot: {x: 0.5037037, y: -0.01754386}
+    pivot: {x: 0.51123595, y: -0.042857144}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 135
-      height: 57
-    spriteID: 4ded8fbb6712d344e8c79e5d8069b35f
+      width: 89
+      height: 70
+    spriteID: e0ece342d4cc9254c8482f1f9f2a960a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -142,7 +142,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
   spriteSheetImportData:
-  - name: Cabinets_0
+  - name: Computer
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -150,10 +150,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 4
-      width: 19
-      height: 50
-    spriteID: fead27c7695352f45ba9613d5b69a70b
+      y: 58
+      width: 8
+      height: 16
+    spriteID: d62b6b1bd8dc77d498f8f102d9b4ac15
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -162,18 +162,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: Cabinets_1
+  - name: Printer
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 25
-      y: 4
-      width: 19
-      height: 50
-    spriteID: 4ec0eb167726aa94b88427fe0e346dac
+      x: 22
+      y: 60
+      width: 14
+      height: 7
+    spriteID: 874bfae976d86c04e8cd25d7100ef36f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -182,18 +182,178 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: Cabinets_2
+  - name: Diploma
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 54
-      y: 34
+      x: 44
+      y: 47
+      width: 13
+      height: 15
+    spriteID: 22f4861ebd028f84a85fb27c220ce556
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Shelf
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 57
+      width: 29
+      height: 4
+    spriteID: 48f5a60c86ec0bb47b300013df464769
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Painting
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 5
+      y: 24
+      width: 33
+      height: 30
+    spriteID: 8e8ab3badb3e18841816291530f75f05
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: SmallShelf
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 46
       width: 20
+      height: 4
+    spriteID: 841499050ba181f41affbf0886b03baa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Trash1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 44
+      y: 34
+      width: 5
+      height: 4
+    spriteID: 7624712ba5bf45647b749f2a9dfc22ea
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Papers
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 57
+      y: 34
+      width: 12
+      height: 7
+    spriteID: d36ca7947d6fc2145b78dbfb9ab76893
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Trash2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 44
+      y: 21
+      width: 6
+      height: 4
+    spriteID: 78a32577ba4f81940abb1d885e5a21f3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Lamp
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 61
+      y: 5
+      width: 9
+      height: 25
+    spriteID: 54f63aac859df1b42be11ac1ef0db71d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Globe
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 75
+      y: 6
+      width: 17
       height: 20
-    spriteID: 8ea5f583c8561e04789d79afe878c9f8
+    spriteID: 132a18e28fa5461468f99b024582aae7
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -202,18 +362,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: Cabinets_3
+  - name: Trashcan
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 83
+      x: 6
       y: 4
-      width: 19
-      height: 50
-    spriteID: 894b5e7cb6e3128428b21915be5e3a1f
+      width: 14
+      height: 17
+    spriteID: 65063936913cc954880d0bad7c78c8c0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -222,18 +382,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: Cabinets_4
+  - name: Statue
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 104
-      y: 35
-      width: 35
-      height: 26
-    spriteID: f291e0e224b652945834e319ffdb988c
+      x: 27
+      y: 5
+      width: 7
+      height: 13
+    spriteID: 04c8c73af34187649b655456b60398c2
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -242,38 +402,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: Cabinets_5
+  - name: Photo
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 46
-      y: 4
-      width: 36
-      height: 19
-    spriteID: c96fc320c3fe1424d987ea5e898ae1a1
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: Cabinets_6
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 104
-      y: 4
-      width: 35
-      height: 26
-    spriteID: deaf6c79a0bf57543a557287feedb837
+      x: 43
+      y: 6
+      width: 10
+      height: 11
+    spriteID: 238836b2432813940847a04959faa5c9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -284,20 +424,20 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   asepriteLayers:
   - layerIndex: 0
-    guid: 2065406273
-    name: Cabinets
+    guid: -1294951808
+    name: OfficeStuff
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Cabinets
+    - name: OfficeStuff
       frameIndex: 0
       cellRect:
-        x: 1
-        y: 1
-        width: 135
-        height: 57
-      spriteId: 4ded8fbb6712d344e8c79e5d8069b35f
+        x: 3
+        y: 3
+        width: 89
+        height: 70
+      spriteId: e0ece342d4cc9254c8482f1f9f2a960a
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -340,4 +480,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 138, y: 64}
+  canvasSize: {x: 97, y: 77}
