@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 139754adeb6f59343a40e5d99b88bf3a
+guid: b9508628885c51441b9e6a7671ad4929
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CharacterIdle_0
+      name: StatueAnimation_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 22
-        height: 38
+        width: 7
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e638927fd84a4a641a3f5089e7238b7f
-      internalID: -1343772136
+      spriteID: 01e1d586d93799f47b57005c977e4d9d
+      internalID: 79703615
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharacterIdle_1
+      name: StatueAnimation_1
       rect:
         serializedVersion: 2
-        x: 22
+        x: 7
         y: 0
-        width: 22
-        height: 38
+        width: 7
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab1ab56d4fa114f4e9f9783d0f829051
-      internalID: 432305632
+      spriteID: 7351f80163f2a6247939179abab057a1
+      internalID: 1778029149
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharacterIdle_2
+      name: StatueAnimation_2
       rect:
         serializedVersion: 2
-        x: 44
+        x: 14
         y: 0
-        width: 22
-        height: 38
+        width: 7
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5edc8f81ccba14e40bdbee2833352017
-      internalID: -2037297066
+      spriteID: ef088e338c3d4ab4586a0a0ef69951f5
+      internalID: 1224680280
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharacterIdle_3
+      name: StatueAnimation_3
       rect:
         serializedVersion: 2
-        x: 66
+        x: 21
         y: 0
-        width: 22
-        height: 38
+        width: 7
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e8e5b0e8e11296428827290a4287f4c
-      internalID: -1210951210
+      spriteID: 9be590428905fae4bb0b6d5a24a520c0
+      internalID: -231001416
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharacterIdle_4
+      name: StatueAnimation_4
       rect:
         serializedVersion: 2
-        x: 88
+        x: 28
         y: 0
-        width: 22
-        height: 38
+        width: 7
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,8 +208,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12cf490b738c67e4594eb14ea3acbd25
-      internalID: 1552324001
+      spriteID: d2da4299ce712334b9c112fcc85a430b
+      internalID: 1373886526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StatueAnimation_5
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 0
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cbdc6c0fc1a55744a07b6709ad85ba9
+      internalID: 1024987544
       vertices: []
       indices: 
       edges: []
@@ -225,11 +246,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CharacterIdle_0: -1343772136
-      CharacterIdle_1: 432305632
-      CharacterIdle_2: -2037297066
-      CharacterIdle_3: -1210951210
-      CharacterIdle_4: 1552324001
+      StatueAnimation_0: 79703615
+      StatueAnimation_1: 1778029149
+      StatueAnimation_2: 1224680280
+      StatueAnimation_3: -231001416
+      StatueAnimation_4: 1373886526
+      StatueAnimation_5: 1024987544
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
