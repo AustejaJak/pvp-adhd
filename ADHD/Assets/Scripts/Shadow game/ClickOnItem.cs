@@ -15,7 +15,7 @@ public class ClickOnItem : MonoBehaviour
         gameObjectSpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    private void OnMouseDown()
+    public void Click()
     {
         if(isHiden)
         {
@@ -23,6 +23,9 @@ public class ClickOnItem : MonoBehaviour
             basePanelScript.SetWhite(objectId);
             gameEventsScript.AddPoint();
             isHiden = false;
+        }
+        else{
+            gameEventsScript.AddMissclick();
         }
     }
 }
