@@ -13,12 +13,32 @@ public class SceneController : MonoBehaviour
 
     [SerializeField] private MainCard originalCard;
     [SerializeField] private Sprite[] images;
+    [SerializeField] private TextMesh timerLabel;
+    [SerializeField] private TextMesh errorLabel;
+
+    private float elapsedTime = 0f;
+    private bool timerRunning = false;
 
     private void Start()
     {
+        SetupCards();
+    }
+
+    private void Update()
+    {
+        // Update the timer if it's running
+        if (timerRunning)
+        {
+            elapsedTime += Time.deltaTime;
+            UpdateTimerDisplay();
+        }
+    }
+
+    private void SetupCards()
+    {
         Vector3 startPos = originalCard.transform.position; //The position of the first card. All other cards are offset from here.
 
-        int[] numbers = { 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5};
+        int[] numbers = { 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5 };
         numbers = ShuffleArray(numbers); //This is a function we will create in a minute!
 
         for (int i = 0; i < gridCols; i++)
@@ -46,6 +66,16 @@ public class SceneController : MonoBehaviour
         }
     }
 
+    private void StartTimer()
+    {
+        timerRunning = true;
+    }
+
+    private void UpdateTimerDisplay()
+    {
+        timerLabel.text = "Time: " + Mathf.FloorToInt(elapsedTime).ToString();
+    }
+
     private int[] ShuffleArray(int[] numbers)
     {
         int[] newArray = numbers.Clone() as int[];
@@ -64,6 +94,7 @@ public class SceneController : MonoBehaviour
     private MainCard _secondRevealed;
 
     private int _score = 0;
+    private int _error = 0;
     [SerializeField] private TextMesh scoreLabel;
 
     public bool canReveal
@@ -76,6 +107,7 @@ public class SceneController : MonoBehaviour
         if (_firstRevealed == null)
         {
             _firstRevealed = card;
+            StartTimer();
         }
         else
         {
@@ -97,6 +129,19 @@ public class SceneController : MonoBehaviour
 
             _firstRevealed.Unreveal();
             _secondRevealed.Unreveal();
+
+
+            if (_firstRevealed.revealedBefore && _secondRevealed.revealedBefore)
+            {
+                _error += 2;
+            }
+            else if (_secondRevealed.revealedBefore)
+            {
+                _error += 1;
+            }
+            _firstRevealed.revealedBefore = true;
+            _secondRevealed.revealedBefore = true;
+            errorLabel.text = "Errors: " + _error;
         }
 
         _firstRevealed = null;
