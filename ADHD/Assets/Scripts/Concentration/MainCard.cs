@@ -7,6 +7,7 @@ public class MainCard : MonoBehaviour
 
     [SerializeField] private SceneController controller;
     [SerializeField] private GameObject Card_Back;
+    public bool revealedBefore = false;
 
     public void OnMouseDown()
     {
