@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f32b04149a99a841bc915f1553afbb9
-      internalID: -1420232209
+      spriteID: 78044e1c5ac5d92409227c2fbd1cca08
+      internalID: -937064667
       vertices: []
       indices: 
       edges: []
@@ -145,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d97f4ac9596fd4419c83881fdc75aed
-      internalID: -1280944117
+      spriteID: f5c486737df12be4cb1d7ebbb5f9b6c2
+      internalID: -1489057229
       vertices: []
       indices: 
       edges: []
@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 833149dd347d6b94a8663ed534641b9e
-      internalID: 1697994770
+      spriteID: 556ae76706d41634098a72afc35aa4f7
+      internalID: 1919715509
       vertices: []
       indices: 
       edges: []
@@ -187,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8025d0d777069cb4e9b0ba5a9d8ad71d
-      internalID: -425086096
+      spriteID: 5c89d53dc45d094418c26cd52d6bfa03
+      internalID: -1325534054
       vertices: []
       indices: 
       edges: []
@@ -208,8 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7cb9b6c1290fe84598638e21c76ba6c
-      internalID: -1048573961
+      spriteID: c5c9b48a4a6c5434db9b1442cff2457f
+      internalID: 1611028653
       vertices: []
       indices: 
       edges: []
@@ -229,8 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 084dd3cb4e3d047429d33d436e7d170b
-      internalID: -68247768
+      spriteID: 8a826d7f7c94ef74c9be7afdf6559b98
+      internalID: 1737086332
       vertices: []
       indices: 
       edges: []
@@ -250,8 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1c62e7c43de345498a4479e4765c0c6
-      internalID: -2035647270
+      spriteID: c2acae1727178954d98449e053804f4e
+      internalID: -1204716326
       vertices: []
       indices: 
       edges: []
@@ -271,8 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9fabb619071f234a8356a7a15db93ab
-      internalID: -700492893
+      spriteID: 8bd4677707cbfbf4f86bde26d3589465
+      internalID: 1342380646
       vertices: []
       indices: 
       edges: []
@@ -292,8 +292,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8125f0205c3c1f74b800c1963159c1c8
-      internalID: -929821511
+      spriteID: 4405543acc71ba341b92e141a0be5617
+      internalID: 360632415
       vertices: []
       indices: 
       edges: []
@@ -313,8 +313,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 677b063ba725acf4cbeb776c274ff956
-      internalID: 1744687386
+      spriteID: cb27884017e124847bccaa2882e9b82f
+      internalID: 1526199870
       vertices: []
       indices: 
       edges: []
@@ -334,8 +334,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5c3473ed7a5e9c46a4a9095448911b0
-      internalID: -1079813567
+      spriteID: a95581a3f379e814aa763221406097ce
+      internalID: -1551761341
       vertices: []
       indices: 
       edges: []
@@ -355,8 +355,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c6a3e6192548674199c9eb2b7e7e873
-      internalID: 839008143
+      spriteID: 0e9898ee4491abf4f9e7759fff3e7f04
+      internalID: -73056848
       vertices: []
       indices: 
       edges: []
@@ -376,281 +376,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b57f6d2d62543a4b8768efe3fca92b8
-      internalID: 617367937
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Globe_13
-      rect:
-        serializedVersion: 2
-        x: 221
-        y: 0
-        width: 17
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 27f033d5f14f3e14e94dc4ad3bf8b9b0
-      internalID: 599814576
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Globe_14
-      rect:
-        serializedVersion: 2
-        x: 238
-        y: 0
-        width: 17
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c74609af66fbf98478a7c797a7d6fb2f
-      internalID: 1330556059
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Globe_15
-      rect:
-        serializedVersion: 2
-        x: 255
-        y: 0
-        width: 17
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 799da2f7d45b27149af2c5c582ca1e52
-      internalID: 469747827
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Globe_16
-      rect:
-        serializedVersion: 2
-        x: 272
-        y: 0
-        width: 17
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0f33636d09d9110499bc6586e026782c
-      internalID: -1028606485
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Globe_17
-      rect:
-        serializedVersion: 2
-        x: 289
-        y: 0
-        width: 17
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6b535f624fb99e244a2f9f298c414a33
-      internalID: 594147174
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Globe_18
-      rect:
-        serializedVersion: 2
-        x: 306
-        y: 0
-        width: 17
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e775e29cbfecd544099b4f6665fa165e
-      internalID: -403479549
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Globe_19
-      rect:
-        serializedVersion: 2
-        x: 323
-        y: 0
-        width: 17
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 220a3d86330eb8742a72a4ad7c37bb57
-      internalID: 1362318252
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Globe_20
-      rect:
-        serializedVersion: 2
-        x: 340
-        y: 0
-        width: 17
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 68cf19127308428458eb4d5f65c2e11d
-      internalID: 1771300726
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Globe_21
-      rect:
-        serializedVersion: 2
-        x: 357
-        y: 0
-        width: 17
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 29b9aef8a527dde4bb3fa219bd4d6a4b
-      internalID: -1335857132
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Globe_22
-      rect:
-        serializedVersion: 2
-        x: 374
-        y: 0
-        width: 17
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d813321d55e58884ca587b2cee19a58a
-      internalID: 2083547918
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Globe_23
-      rect:
-        serializedVersion: 2
-        x: 391
-        y: 0
-        width: 17
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 95c70bd86039e834f89096c949f5d49f
-      internalID: -1125677668
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Globe_24
-      rect:
-        serializedVersion: 2
-        x: 408
-        y: 0
-        width: 17
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1c0b23b42927b974a8eba2b9cb6b2dd0
-      internalID: 1600285881
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Globe_25
-      rect:
-        serializedVersion: 2
-        x: 425
-        y: 0
-        width: 17
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 98c4129e7268eb5409404e86eb63ae63
-      internalID: 1518646220
+      spriteID: 864a4f2446d290141af8ca8763987d47
+      internalID: -296287409
       vertices: []
       indices: 
       edges: []
@@ -666,32 +393,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Globe_0: -1420232209
-      Globe_1: -1280944117
-      Globe_10: -1079813567
-      Globe_11: 839008143
-      Globe_12: 617367937
-      Globe_13: 599814576
-      Globe_14: 1330556059
-      Globe_15: 469747827
-      Globe_16: -1028606485
-      Globe_17: 594147174
-      Globe_18: -403479549
-      Globe_19: 1362318252
-      Globe_2: 1697994770
-      Globe_20: 1771300726
-      Globe_21: -1335857132
-      Globe_22: 2083547918
-      Globe_23: -1125677668
-      Globe_24: 1600285881
-      Globe_25: 1518646220
-      Globe_3: -425086096
-      Globe_4: -1048573961
-      Globe_5: -68247768
-      Globe_6: -2035647270
-      Globe_7: -700492893
-      Globe_8: -929821511
-      Globe_9: 1744687386
+      Globe_0: -937064667
+      Globe_1: -1489057229
+      Globe_10: -1551761341
+      Globe_11: -73056848
+      Globe_12: -296287409
+      Globe_2: 1919715509
+      Globe_3: -1325534054
+      Globe_4: 1611028653
+      Globe_5: 1737086332
+      Globe_6: -1204716326
+      Globe_7: 1342380646
+      Globe_8: 360632415
+      Globe_9: 1526199870
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
