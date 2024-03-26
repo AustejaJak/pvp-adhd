@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TrainSpawner : MonoBehaviour
 {
@@ -10,7 +11,11 @@ public class TrainSpawner : MonoBehaviour
     public Sprite[] trainSprites; // Array of sprites for the trains
     private int currentTrains = 0; // Current number of spawned trains
     [SerializeField] private TextMesh TimeLabel;
-    private float timer = 0f;
+    [SerializeField] private TextMesh ScoreLabel;
+    [SerializeField] private TextMesh ErrorLabel;
+    [SerializeField]private float timer;
+    private int score = 0;
+    private int error = 0;
 
     void Start()
     {
@@ -21,8 +26,30 @@ public class TrainSpawner : MonoBehaviour
     void Update()
     {
         // Update timer
-        timer += Time.deltaTime;
+        timer -= Time.deltaTime;
         TimeLabel.text = "Time: " + Mathf.Round(timer);
+        if(timer <= 0)
+        {
+            GlobalManager globalManagerInstance = FindObjectOfType<GlobalManager>();
+            if(globalManagerInstance)
+            {
+                globalManagerInstance.AddPoints(score);
+                globalManagerInstance.AddScene(SceneManager.GetActiveScene().name);
+            }
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+    }
+
+    public void AddScore()
+    {
+        score++;
+        ScoreLabel.text = "Score: " + score;
+    }
+
+    public void AddError()
+    {
+        error++;
+        ErrorLabel.text = "Errors: " + error;
     }
 
 

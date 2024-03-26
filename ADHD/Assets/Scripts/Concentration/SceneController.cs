@@ -149,7 +149,13 @@ public class SceneController : MonoBehaviour
 
         if(_score == 6)
         {
-            SceneManager.LoadScene("Labirinth");
+            GlobalManager globalManagerInstance = FindObjectOfType<GlobalManager>();
+            if(globalManagerInstance)
+            {
+                globalManagerInstance.AddPoints((int)elapsedTime);
+                globalManagerInstance.AddScene(SceneManager.GetActiveScene().name);
+            }
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
     }

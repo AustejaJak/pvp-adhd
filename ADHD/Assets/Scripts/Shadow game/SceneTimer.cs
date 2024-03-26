@@ -8,18 +8,20 @@ public class SceneTimer : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI timeLabel;
     private float sceneTime = 0f;
-    public float SceneTime => sceneTime;
-    private GlobalManager globalManager;
 
     void Start()
     {
-        globalManager = FindAnyObjectByType<GlobalManager>();
     }
 
     void Update()
     {
-        globalManager.totalSceneTime += Time.deltaTime;
         sceneTime += Time.deltaTime;
-        timeLabel.text = TimeSpan.FromSeconds(sceneTime).ToString("ss");
+        TimeSpan timeSpan = TimeSpan.FromSeconds(sceneTime);
+        timeLabel.text = string.Format("{0:D2}:{1:D2}", (int)timeSpan.TotalMinutes, timeSpan.Seconds);
+    }
+
+    public int GetTotalSeconds()
+    {
+        return (int)sceneTime;
     }
 }

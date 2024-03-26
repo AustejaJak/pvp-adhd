@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class DualNBackController : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class DualNBackController : MonoBehaviour
     private int currentSequenceIndex = 0;
     private int totalRounds = 20; // Total rounds per game
     private int nLevel = 1; // The "N" in N-back
+    private int score = 0;
+    private int errors = 0;
 
     void Start()
     {
@@ -88,11 +91,13 @@ public class DualNBackController : MonoBehaviour
 
             if (positionSequence[currentIndex] == positionSequence[nBackIndex])
             {
+                score++;
                 feedbackText.text = "Correct Position Match!";
                 feedbackText.color = Color.green;
             }
             else
             {
+                errors++;
                 feedbackText.text = "Incorrect Position Match.";
                 feedbackText.color = Color.red;
             }
@@ -116,11 +121,13 @@ public class DualNBackController : MonoBehaviour
 
             if (audioSequence[currentIndex] == audioSequence[nBackIndex])
             {
+                score++;
                 feedbackText.text = "Correct Audio Match!";
                 feedbackText.color = Color.green;
             }
             else
             {
+                errors++;
                 feedbackText.text = "Incorrect Audio Match.";
                 feedbackText.color = Color.red;
             }
@@ -130,6 +137,11 @@ public class DualNBackController : MonoBehaviour
             feedbackText.text = "Not enough data for comparison.";
             feedbackText.color = Color.white;
         }
+    }
+
+    public int GetScore()
+    {
+        return score;
     }
 
     void CleanupAfterGame()

@@ -72,6 +72,16 @@ public class GameEvents : MonoBehaviour
     public void AddPoint()
     {
         points+=1;
-        if(points >= 8) SceneManager.LoadScene(nextSceneName);
+        if(points >= 8)
+        {
+            SceneTimer sceneTimerInstance = FindObjectOfType<SceneTimer>();
+            GlobalManager globalManagerInstance = FindObjectOfType<GlobalManager>();
+            if(sceneTimerInstance && globalManagerInstance)
+            {
+                globalManagerInstance.AddPoints(sceneTimerInstance.GetTotalSeconds());
+                globalManagerInstance.AddScene(SceneManager.GetActiveScene().name);
+            }
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 }

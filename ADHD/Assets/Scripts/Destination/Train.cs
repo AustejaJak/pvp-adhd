@@ -6,8 +6,6 @@ public class Train : MonoBehaviour
 {
     public Transform waypoint; // Waypoint representing the path
     public float speed = 5f; // Speed at which the train moves
-    [SerializeField] private TextMesh ScoreLabel;
-    [SerializeField] private TextMesh ErrorLabel;
     private int ID;
 
     void Update()
@@ -29,17 +27,13 @@ public class Train : MonoBehaviour
                     // Check if the destination number matches the train's ID
                     if (destinationNumber == ID)
                     {
-                        // Increase score
-                        int currentScore = int.Parse(ScoreLabel.text.Split(':')[1].Trim());
-                        currentScore++;
-                        // Update errorLabel text with the new score
-                        ScoreLabel.text = "Score: " + currentScore;
+                        TrainSpawner trainSpawnerInstance = FindObjectOfType<TrainSpawner>();
+                        trainSpawnerInstance.AddScore();
                     }
                     else
                     {
-                        int currentScore = int.Parse(ErrorLabel.text.Split(':')[1].Trim());
-                        currentScore++;
-                        ErrorLabel.text = "Errors: " + currentScore;
+                        TrainSpawner trainSpawnerInstance = FindObjectOfType<TrainSpawner>();
+                        trainSpawnerInstance.AddError();
                     }
 
                     Destroy(gameObject);

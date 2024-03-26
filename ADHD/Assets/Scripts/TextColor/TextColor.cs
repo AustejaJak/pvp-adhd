@@ -106,4 +106,9 @@ public class TextColor : MonoBehaviour
             GenerateColors();
         }
     }
+
+    public int GetPoints()
+    {
+        return points;
+    }
 }

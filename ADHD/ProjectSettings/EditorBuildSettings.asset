@@ -12,11 +12,23 @@ EditorBuildSettings:
     path: Assets/Scenes/ShadowGame.unity
     guid: 3d160d2203002dd4b8d3712bec96e2c2
   - enabled: 1
-    path: Assets/Scenes/Labirinth.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Destination.unity
+    guid: bd761f56f9393dd4f8910f1362ae9a5c
   - enabled: 1
     path: Assets/Scenes/Concentration.unity
     guid: d8fccd82f49cf8a4ca1abd5fbb721fdf
+  - enabled: 1
+    path: Assets/Scenes/Dual N-back.unity
+    guid: 2bfffd416820b1a4285c4db426be175a
+  - enabled: 1
+    path: Assets/Scenes/TextColor.unity
+    guid: 72bdd813b941b1c42b90d8a825a99d68
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: d242697f4c235174cbe132230fea6d65
+  - enabled: 1
+    path: Assets/Scenes/Labirinth.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 0d8184e9d1288d849b3defeeec48628d, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 374ad87729529c74fb79ef81ba2e893e, type: 2}
