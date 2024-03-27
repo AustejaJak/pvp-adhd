@@ -342,7 +342,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1440, y: 3200}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -890,7 +890,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6.666667
+  orthographic size: 6.166667
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1348,7 +1348,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98bfdc4646f38214bbeeae1d69f2f487, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalSceneTime: 0
+  pointsInScene: 
+  sceneName: []
 --- !u!4 &798778664
 Transform:
   m_ObjectHideFlags: 0
