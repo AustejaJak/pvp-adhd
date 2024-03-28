@@ -34,6 +34,6 @@ public class TextColorCountdown : MonoBehaviour
 
     void UpdateTimerUI()
     {
-        timeLabel.text = "Time: " + Mathf.Round(timer);
+        timeLabel.text = "" + Mathf.Round(timer);
     }
 }
