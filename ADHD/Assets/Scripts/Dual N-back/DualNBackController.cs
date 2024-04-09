@@ -15,23 +15,26 @@ public class DualNBackController : MonoBehaviour
     public Button positionMatchButton;
     public Button audioMatchButton;
 
-    private List<int> positionSequence = new List<int>(); // Stores the indices of positions
-    private List<int> audioSequence = new List<int>(); // Stores the indices of audio clips to play
-    private int currentSequenceIndex = 0;
-    private int totalRounds = 20; // Total rounds per game
-    private int nLevel = 1; // The "N" in N-back
-    private int score = 0;
-    private int errors = 0;
+    private readonly List<int> _positionHistory = new(); // Stores history of positions
+    private readonly List<int> _audioHistory = new(); // Stores history of audio clips to play
+    private int _currentRound;
+    private const int TotalRounds = 20; // Total rounds per game
+    private const int NLevel = 2; // The "N" in N-back
+    private const int AudioAmount = 3; // How many letters? 3 = a, b, c
+    private int _positionMatches;
+    private int _audioMatches;
+    private int _score;
+    private int _errors;
 
-    void Start()
+    private void Start()
     {
         StartCoroutine(InitialDisplay());
     }
 
-    IEnumerator InitialDisplay()
+    private IEnumerator InitialDisplay()
     {
         feedbackPanel.SetActive(true);
-        feedbackText.text = "Dual " + nLevel.ToString() + "-Back";
+        feedbackText.text = "Dual " + NLevel + "-Back";
         feedbackText.color = Color.white;
         yield return new WaitForSeconds(3);
         feedbackPanel.SetActive(false);
@@ -39,30 +42,62 @@ public class DualNBackController : MonoBehaviour
         StartCoroutine(GameLoop()); // Start the main game loop
     }
 
-    IEnumerator GameLoop()
+    private IEnumerator GameLoop()
     {
-        while (currentSequenceIndex < totalRounds)
+        while (_currentRound < TotalRounds)
         {
             GenerateRound();
             yield return new WaitForSeconds(3);
-            currentSequenceIndex++;
+            _currentRound++;
         }
 
         CleanupAfterGame();
     }
 
-    void GenerateRound()
+    private void GenerateRound()
     {
+        // Check if the player missed a match in the previous round
+        if (_positionHistory.Count > NLevel && _positionHistory[^1] == _positionHistory[_positionHistory.Count - NLevel - 1] && !positionMatchButton.interactable)
+        {
+            _errors++;
+        }
+        if (_audioHistory.Count > NLevel && _audioHistory[^1] == _audioHistory[_audioHistory.Count - NLevel - 1] && !audioMatchButton.interactable)
+        {
+            _errors++;
+        }
+
         positionMatchButton.interactable = true;
         audioMatchButton.interactable = true;
 
         feedbackPanel.SetActive(false);
 
-        int newPositionIndex = Random.Range(0, squareButtons.Length);
-        int newAudioIndex = Random.Range(0, 2);
+        int newPositionIndex;
+        int newAudioIndex;
 
-        positionSequence.Add(newPositionIndex);
-        audioSequence.Add(newAudioIndex);
+        // If it's one of the last 5 rounds and there weren't 3 matches, force them
+        if (_currentRound >= TotalRounds - 5 && (_positionMatches < 3 || _audioMatches < 3) && _positionHistory.Count >= NLevel && _audioHistory.Count >= NLevel)
+        {
+            newPositionIndex = _positionHistory[^NLevel];
+            newAudioIndex = _audioHistory[^NLevel];
+        }
+        else
+        {
+            newPositionIndex = Random.Range(0, squareButtons.Length);
+            newAudioIndex = Random.Range(0, AudioAmount);
+        }
+
+        // Check if the new round is a match
+        if (_positionHistory.Count > NLevel && newPositionIndex == _positionHistory[^NLevel])
+        {
+            _positionMatches++;
+        }
+        if (_audioHistory.Count > NLevel && newAudioIndex == _audioHistory[^NLevel])
+        {
+            _audioMatches++;
+        }
+
+        _positionHistory.Add(newPositionIndex);
+        _audioHistory.Add(newAudioIndex);
 
         HighlightSquare(newPositionIndex);
 
@@ -70,7 +105,7 @@ public class DualNBackController : MonoBehaviour
         audioSource.Play();
     }
 
-    void HighlightSquare(int index)
+    private void HighlightSquare(int index)
     {
         foreach (Button square in squareButtons)
         {
@@ -84,20 +119,20 @@ public class DualNBackController : MonoBehaviour
         positionMatchButton.interactable = false;
         feedbackPanel.SetActive(true);
 
-        if (positionSequence.Count > nLevel)
+        if (_positionHistory.Count > NLevel)
         {
-            int currentIndex = positionSequence.Count - 1;
-            int nBackIndex = currentIndex - nLevel;
+            int currentIndex = _positionHistory.Count - 1;
+            int nBackIndex = currentIndex - NLevel;
 
-            if (positionSequence[currentIndex] == positionSequence[nBackIndex])
+            if (_positionHistory[currentIndex] == _positionHistory[nBackIndex])
             {
-                score++;
+                _score++;
                 feedbackText.text = "Correct Position Match!";
                 feedbackText.color = Color.green;
             }
             else
             {
-                errors++;
+                _errors++;
                 feedbackText.text = "Incorrect Position Match.";
                 feedbackText.color = Color.red;
             }
@@ -114,20 +149,20 @@ public class DualNBackController : MonoBehaviour
         audioMatchButton.interactable = false;
         feedbackPanel.SetActive(true);
 
-        if (audioSequence.Count > nLevel)
+        if (_audioHistory.Count > NLevel)
         {
-            int currentIndex = audioSequence.Count - 1;
-            int nBackIndex = currentIndex - nLevel;
+            int currentIndex = _audioHistory.Count - 1;
+            int nBackIndex = currentIndex - NLevel;
 
-            if (audioSequence[currentIndex] == audioSequence[nBackIndex])
+            if (_audioHistory[currentIndex] == _audioHistory[nBackIndex])
             {
-                score++;
+                _score++;
                 feedbackText.text = "Correct Audio Match!";
                 feedbackText.color = Color.green;
             }
             else
             {
-                errors++;
+                _errors++;
                 feedbackText.text = "Incorrect Audio Match.";
                 feedbackText.color = Color.red;
             }
@@ -141,13 +176,13 @@ public class DualNBackController : MonoBehaviour
 
     public int GetScore()
     {
-        return score;
+        return _score;
     }
 
-    void CleanupAfterGame()
+    private void CleanupAfterGame()
     {
-        positionSequence.Clear();
-        audioSequence.Clear();
+        _positionHistory.Clear();
+        _audioHistory.Clear();
 
         feedbackPanel.SetActive(true);
         feedbackText.text = "Game Over";
