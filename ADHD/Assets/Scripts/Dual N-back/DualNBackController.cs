@@ -14,13 +14,16 @@ public class DualNBackController : MonoBehaviour
     public Text feedbackText;
     public Button positionMatchButton;
     public Button audioMatchButton;
+    public Sprite bigButton;
+    public Sprite bigButtonNull;
+
 
     private readonly List<int> _positionHistory = new(); // Stores history of positions
     private readonly List<int> _audioHistory = new(); // Stores history of audio clips to play
     private int _currentRound;
     private const int TotalRounds = 20; // Total rounds per game
     private const int NLevel = 2; // The "N" in N-back
-    private const int AudioAmount = 3; // How many letters? 3 = a, b, c
+    private const int AudioAmount = 4; // How many letters? 3 = a, b, c
     private int _positionMatches;
     private int _audioMatches;
     private int _score;
@@ -109,9 +112,9 @@ public class DualNBackController : MonoBehaviour
     {
         foreach (Button square in squareButtons)
         {
-            square.image.color = Color.blue;
+            square.image.sprite = bigButtonNull;
         }
-        squareButtons[index].image.color = Color.green;
+        squareButtons[index].image.sprite = bigButton;
     }
 
     public void PositionMatchClicked()
