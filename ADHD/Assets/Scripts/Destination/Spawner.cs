@@ -13,7 +13,7 @@ public class TrainSpawner : MonoBehaviour
     [SerializeField] private TextMesh TimeLabel;
     [SerializeField] private TextMesh ScoreLabel;
     [SerializeField] private TextMesh ErrorLabel;
-    [SerializeField]private float timer;
+    [SerializeField] private float timer;
     private int score = 0;
     private int error = 0;
 
@@ -28,10 +28,10 @@ public class TrainSpawner : MonoBehaviour
         // Update timer
         timer -= Time.deltaTime;
         TimeLabel.text = "Time: " + Mathf.Round(timer);
-        if(timer <= 0)
+        if (timer <= 0)
         {
             GlobalManager globalManagerInstance = FindObjectOfType<GlobalManager>();
-            if(globalManagerInstance)
+            if (globalManagerInstance)
             {
                 globalManagerInstance.AddPoints(score);
                 globalManagerInstance.AddScene(SceneManager.GetActiveScene().name);
@@ -64,9 +64,10 @@ public class TrainSpawner : MonoBehaviour
             {
                 trainScript.SetInitialWaypoint(initialWaypoint);//Give its initial waypoint
             }
+            newTrain.SetActive(true);
 
             //Set id and sprite
-            int trainID = Random.Range(1, trainSprites.Length+1);//Determined by Total amount of destinations
+            int trainID = Random.Range(1, trainSprites.Length + 1);//Determined by Total amount of destinations
             Sprite trainSprite = null;
             if (trainSprites != null && trainSprites.Length > 0)
             {

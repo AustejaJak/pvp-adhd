@@ -13,18 +13,16 @@ public class Switch : MonoBehaviour
 
     void OnMouseDown()
     {
-        // Rotate the switch to the angle specified in switchRotations
-        if (currentPositionIndex < switchRotations.Length)
-        {
-            transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, switchRotations[currentPositionIndex]);
 
-            // Move to the next index
-            currentPositionIndex++;
-            if (currentPositionIndex >= switchRotations.Length)
-            {
-                currentPositionIndex = 0; // Reset to the first angle if reached the last one
-            }
+        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, switchRotations[currentPositionIndex]);
+
+        // Move to the next index
+        currentPositionIndex++;
+        if (currentPositionIndex >= switchRotations.Length)
+        {
+            currentPositionIndex = 0; // Reset to the first angle if reached the last one
         }
+
     }
 
     public Transform GetWaypoint()
