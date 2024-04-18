@@ -56,7 +56,7 @@ public class Train : MonoBehaviour
     {
         ID = id;
         GetComponent<SpriteRenderer>().sprite = trainSprite;
-        GetComponent<Transform>().localScale = new Vector3(4, 4, 1);
+        GetComponent<Transform>().localScale = new Vector3(3, 3, 1);
     }
 
     public int GetTrainID()
