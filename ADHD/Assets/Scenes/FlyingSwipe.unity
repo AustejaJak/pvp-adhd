@@ -945,7 +945,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabToSpawn: {fileID: 1012807228342322997, guid: 26cba1a1daa0e0c408d3f576d47f8b02, type: 3}
   spawnInterval: 5
-  moveSpeed: 5
+  moveSpeed: 8
   spawners:
   - {fileID: 1355307126}
   - {fileID: 386602038}
