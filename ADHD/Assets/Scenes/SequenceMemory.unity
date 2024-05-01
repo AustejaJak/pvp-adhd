@@ -1560,7 +1560,7 @@ MonoBehaviour:
   score: 0
   error: 0
   sequenceLength: 3
-  displayTime: 1
+  displayTime: 0.5
   pointsLabel: {fileID: 607718090}
 --- !u!4 &1464543212
 Transform:
