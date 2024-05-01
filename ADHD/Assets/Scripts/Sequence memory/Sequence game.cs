@@ -51,7 +51,7 @@ public class Sequencegame : MonoBehaviour
                             if (currentIndex >= sequence.Count)
                             {
                                 score++;
-                                pointsLabel.text = " " + score;
+                                pointsLabel.text = "Points: " + score;
                                 currentIndex = 0;
                                 // Generate and display next sequence
                                 GenerateSequence();
