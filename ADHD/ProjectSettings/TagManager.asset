@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Audio
+  tags:
+  - Walls
+  - Keys
+  - Goal
   layers:
   - Default
   - TransparentFX
