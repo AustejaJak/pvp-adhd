@@ -32,10 +32,18 @@ public class AudioManager : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+
+        // Load the master volume setting
+        LoadMasterVolume();
     }
 
     public void PlaySFX(AudioClip clip)
     {
         SFXSource.PlayOneShot(clip);
+    }
+
+    public void LoadMasterVolume()
+    {
+        SFXSource.volume = PlayerPrefs.GetFloat("MasterVol", 1f);
     }
 }
