@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
+
     public const int gridRows = 6;
     public const int gridCols = 2;
     public const float offsetX = 1.5f;
@@ -88,6 +89,7 @@ public class SceneController : MonoBehaviour
         return newArray;
     }
 
+
     private MainCard _firstRevealed;
     private MainCard _secondRevealed;
 
@@ -112,8 +114,6 @@ public class SceneController : MonoBehaviour
             _secondRevealed = card;
             StartCoroutine(CheckMatch());
         }
-
-        AudioManager.instance.PlaySFX(AudioManager.instance.buttonClick);
     }
 
     private IEnumerator CheckMatch()
@@ -122,7 +122,6 @@ public class SceneController : MonoBehaviour
         {
             _score++;
             scoreLabel.text = "" + _score;
-            AudioManager.instance.PlaySFX(AudioManager.instance.success);
         }
         else
         {
@@ -130,6 +129,7 @@ public class SceneController : MonoBehaviour
 
             _firstRevealed.Unreveal();
             _secondRevealed.Unreveal();
+
 
             if (_firstRevealed.revealedBefore && _secondRevealed.revealedBefore)
             {
@@ -147,20 +147,22 @@ public class SceneController : MonoBehaviour
         _firstRevealed = null;
         _secondRevealed = null;
 
-        if (_score == 6)
+        if(_score == 6)
         {
             GlobalManager globalManagerInstance = FindObjectOfType<GlobalManager>();
-            if (globalManagerInstance)
+            if(globalManagerInstance)
             {
                 globalManagerInstance.AddPoints((int)elapsedTime);
                 globalManagerInstance.AddScene(SceneManager.GetActiveScene().name);
             }
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
+
     }
 
     public void Restart()
     {
         SceneManager.LoadScene("concentration");
     }
+
 }

@@ -17,13 +17,13 @@ public class TrainSpawner : MonoBehaviour
     private int score = 0;
     private int error = 0;
 
-    private void Start()
+    void Start()
     {
         // Start spawning trains
         StartCoroutine(SpawnTrainRoutine());
     }
 
-    private void Update()
+    void Update()
     {
         // Update timer
         timer -= Time.deltaTime;
@@ -44,17 +44,16 @@ public class TrainSpawner : MonoBehaviour
     {
         score++;
         ScoreLabel.text = "Score: " + score;
-        AudioManager.instance.PlaySFX(AudioManager.instance.success);
     }
 
     public void AddError()
     {
         error++;
         ErrorLabel.text = "Errors: " + error;
-        AudioManager.instance.PlaySFX(AudioManager.instance.fail);
     }
 
-    private IEnumerator SpawnTrainRoutine()
+
+    IEnumerator SpawnTrainRoutine()
     {
         while (currentTrains < maxTrains)
         {

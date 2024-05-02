@@ -14,4 +14,14 @@ public class SettingsMenuController : MonoBehaviour
     {
         audioMixer.SetFloat("MasterVol", Mathf.Log10(masterVol.value) * 20f);
     }
+
+    // Start is called before the first frame update
+    private void Start()
+    {
+    }
+
+    // Update is called once per frame
+    private void Update()
+    {
+    }
 }

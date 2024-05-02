@@ -11,8 +11,9 @@ public class Switch : MonoBehaviour
 
     private int currentPositionIndex = 0; // Index of the current switch rotation
 
-    private void OnMouseDown()
+    void OnMouseDown()
     {
+
         transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, switchRotations[currentPositionIndex]);
 
         // Move to the next index
@@ -22,7 +23,6 @@ public class Switch : MonoBehaviour
             currentPositionIndex = 0; // Reset to the first angle if reached the last one
         }
 
-        AudioManager.instance.PlaySFX(AudioManager.instance.buttonClick);
     }
 
     public Transform GetWaypoint()

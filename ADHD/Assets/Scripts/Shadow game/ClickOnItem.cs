@@ -6,29 +6,26 @@ public class ClickOnItem : MonoBehaviour
 {
     public bool isHiden = false;
     public int objectId;
-    private SpriteRenderer gameObjectSpriteRenderer;
+    private SpriteRenderer gameObjectSpriteRenderer; 
     public BasePanel basePanelScript;
     public GameEvents gameEventsScript;
 
-    private void Start()
+    void Start()
     {
         gameObjectSpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     public void Click()
     {
-        if (isHiden)
+        if(isHiden)
         {
             gameObjectSpriteRenderer.color = Color.black;
             basePanelScript.SetWhite(objectId);
             gameEventsScript.AddPoint();
             isHiden = false;
-            AudioManager.instance.PlaySFX(AudioManager.instance.success);
         }
-        else
-        {
+        else{
             gameEventsScript.AddMissclick();
-            AudioManager.instance.PlaySFX(AudioManager.instance.fail);
         }
     }
 }
