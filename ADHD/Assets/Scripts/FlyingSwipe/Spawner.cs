@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using UnityEditor;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public GameObject prefabToSpawn;
+    public GameObject[] prefabToSpawn;
     public float spawnInterval = 2f;
     public float moveSpeed = 5f;
     public Transform[] spawners;
@@ -27,8 +29,9 @@ public class Spawner : MonoBehaviour
         {
             yield return new WaitForSeconds(spawnInterval);
 
+            GameObject randomSwarm = prefabToSpawn[Random.Range(0, prefabToSpawn.Length)];
             Transform randomSpawner = spawners[Random.Range(0, spawners.Length)];
-            GameObject spawnedPrefab = Instantiate(prefabToSpawn, randomSpawner.position, Quaternion.identity);
+            GameObject spawnedPrefab = Instantiate(randomSwarm, randomSpawner.position, Quaternion.identity);
             speed = moveSpeed;
             Vector3 moveDirection = Vector3.zero;
             Swarm swarm = spawnedPrefab.GetComponent<Swarm>();
