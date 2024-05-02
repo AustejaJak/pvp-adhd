@@ -17,7 +17,6 @@ public class Restart : MonoBehaviour
 
     public void RestartGame()
     {
-        AudioManager.instance.PlaySFX(AudioManager.instance.buttonClick);
         SceneManager.LoadScene("Labirinth");
     }
 }

@@ -65,7 +65,6 @@ public class PlayerMovement : MonoBehaviour
                 text.active = true;
                 text2.color = Color.red;
                 text2.SetText("Game Over!");
-                AudioManager.instance.PlaySFX(AudioManager.instance.fail);
             }
             if (collider.gameObject.tag == "Finish")
             {
@@ -76,7 +75,6 @@ public class PlayerMovement : MonoBehaviour
                 text.active = true;
                 text2.color = Color.green;
                 text2.SetText("You Won!");
-                AudioManager.instance.PlaySFX(AudioManager.instance.success);
             }
         }
     }
@@ -87,7 +85,6 @@ public class PlayerMovement : MonoBehaviour
         {
             Destroy(collision.gameObject);
             keyCount--;
-            AudioManager.instance.PlaySFX(AudioManager.instance.success);
             GameObject finish;
             finish = GameObject.Find("Finish");
             if (keyCount == 0)
