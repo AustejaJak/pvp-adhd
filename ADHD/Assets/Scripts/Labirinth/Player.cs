@@ -7,7 +7,7 @@ using TMPro;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5.0f; // Speed of the player
-    int keyCount = 3;
+    private int keyCount = 3;
     public GameObject key;
     public GameObject text;
 
@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void HandleWallCollisions()
+    private void HandleWallCollisions()
     {
         Vector2 playerColliderSize = GetComponent<Collider2D>().bounds.size;
         Vector2 playerPosition = transform.position;
@@ -65,6 +65,7 @@ public class PlayerMovement : MonoBehaviour
                 text.active = true;
                 text2.color = Color.red;
                 text2.SetText("Game Over!");
+                AudioManager.instance.PlaySFX(AudioManager.instance.fail);
             }
             if (collider.gameObject.tag == "Finish")
             {
@@ -75,6 +76,7 @@ public class PlayerMovement : MonoBehaviour
                 text.active = true;
                 text2.color = Color.green;
                 text2.SetText("You Won!");
+                AudioManager.instance.PlaySFX(AudioManager.instance.success);
             }
         }
     }
@@ -85,6 +87,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Destroy(collision.gameObject);
             keyCount--;
+            AudioManager.instance.PlaySFX(AudioManager.instance.success);
             GameObject finish;
             finish = GameObject.Find("Finish");
             if (keyCount == 0)
