@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MainCard : MonoBehaviour
 {
-
     [SerializeField] private SceneController controller;
     [SerializeField] private GameObject Card_Back;
     public bool revealedBefore = false;
@@ -19,6 +18,7 @@ public class MainCard : MonoBehaviour
     }
 
     private int _id;
+
     public int id
     {
         get { return _id; }
@@ -33,8 +33,6 @@ public class MainCard : MonoBehaviour
     public void Unreveal()
     {
         Card_Back.SetActive(true);
+        AudioManager.instance.PlaySFX(AudioManager.instance.fail);
     }
-
-
 }
-

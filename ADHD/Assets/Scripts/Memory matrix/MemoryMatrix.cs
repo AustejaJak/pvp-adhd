@@ -21,17 +21,17 @@ public class MemoryMatrix : MonoBehaviour
     [SerializeField] private TextMeshProUGUI pointsLabel;
     private List<Tile> activeTiles = new List<Tile>();
 
-    void Start()
+    private void Start()
     {
         StartGame();
     }
 
-    void StartGame()
+    private void StartGame()
     {
         GenerateGrid(level);
     }
 
-    void GenerateGrid(int level)
+    private void GenerateGrid(int level)
     {
         int active = 0;
         int tileCount = 0;
@@ -42,11 +42,11 @@ public class MemoryMatrix : MonoBehaviour
         }
         activeTiles.Clear();
 
-        int numTiles = initialTileNumber*level;
+        int numTiles = initialTileNumber * level;
         tilesGuessed = 0;
-        neededTiles = (int)(numTiles*0.5);
-        
-        int numRows = Mathf.CeilToInt((float)numTiles / maxColumns); 
+        neededTiles = (int)(numTiles * 0.5);
+
+        int numRows = Mathf.CeilToInt((float)numTiles / maxColumns);
         int numColumns = Mathf.Min(numTiles, maxColumns);
 
         Vector3 startPos = new Vector3(-(numColumns - 1) * tileSpacing / 2f, (numRows - 1) * tileSpacing / 2f + yScaling, -1);
@@ -64,9 +64,9 @@ public class MemoryMatrix : MonoBehaviour
 
                 bool setActive = Random.Range(0f, 1f) < 0.5f;
 
-                if (numTiles*0.5-active == numTiles-tileCount+1) setActive = true;
+                if (numTiles * 0.5 - active == numTiles - tileCount + 1) setActive = true;
 
-                if(active == numTiles*0.5) setActive = false;
+                if (active == numTiles * 0.5) setActive = false;
 
                 tile.SetActive(setActive);
                 if (setActive) active++;
@@ -81,11 +81,16 @@ public class MemoryMatrix : MonoBehaviour
         tilesGuessed++;
         if (tilesGuessed == neededTiles)
         {
-            score += level*10;
+            score += level * 10;
             pointsLabel.text = "Points: " + score;
-            if(level < maxLevels) level++;
+            if (level < maxLevels) level++;
             GenerateGrid(level);
-        } 
+            AudioManager.instance.PlaySFX(AudioManager.instance.success);
+        }
+        else
+        {
+            AudioManager.instance.PlaySFX(AudioManager.instance.buttonClick);
+        }
     }
 
     public void PlayerFailure()
@@ -94,6 +99,7 @@ public class MemoryMatrix : MonoBehaviour
         {
             level--;
         }
+        AudioManager.instance.PlaySFX(AudioManager.instance.fail);
         GenerateGrid(level);
     }
 
@@ -105,21 +111,21 @@ public class MemoryMatrix : MonoBehaviour
         }
     }
 
-    private void Update() 
+    private void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if(!haveStarted)
+            if (!haveStarted)
             {
                 allTilesInvisible();
                 haveStarted = true;
-            } 
+            }
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
             if (hit.collider != null)
             {
                 GameObject clickedTile = hit.collider.gameObject;
                 Tile tileManager = clickedTile.GetComponent<Tile>();
-                if(tileManager)
+                if (tileManager)
                 {
                     tileManager.OnPointerClick();
                 }

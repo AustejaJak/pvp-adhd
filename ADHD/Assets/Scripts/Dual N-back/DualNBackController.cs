@@ -17,7 +17,6 @@ public class DualNBackController : MonoBehaviour
     public Sprite bigButton;
     public Sprite bigButtonNull;
 
-
     private readonly List<int> _positionHistory = new(); // Stores history of positions
     private readonly List<int> _audioHistory = new(); // Stores history of audio clips to play
     private int _currentRound;
@@ -132,18 +131,21 @@ public class DualNBackController : MonoBehaviour
                 _score++;
                 feedbackText.text = "Correct Position Match!";
                 feedbackText.color = Color.green;
+                AudioManager.instance.PlaySFX(AudioManager.instance.success);
             }
             else
             {
                 _errors++;
                 feedbackText.text = "Incorrect Position Match.";
                 feedbackText.color = Color.red;
+                AudioManager.instance.PlaySFX(AudioManager.instance.fail);
             }
         }
         else
         {
             feedbackText.text = "Not enough data for comparison.";
             feedbackText.color = Color.white;
+            AudioManager.instance.PlaySFX(AudioManager.instance.fail);
         }
     }
 
@@ -162,18 +164,21 @@ public class DualNBackController : MonoBehaviour
                 _score++;
                 feedbackText.text = "Correct Audio Match!";
                 feedbackText.color = Color.green;
+                AudioManager.instance.PlaySFX(AudioManager.instance.success);
             }
             else
             {
                 _errors++;
                 feedbackText.text = "Incorrect Audio Match.";
                 feedbackText.color = Color.red;
+                AudioManager.instance.PlaySFX(AudioManager.instance.fail);
             }
         }
         else
         {
             feedbackText.text = "Not enough data for comparison.";
             feedbackText.color = Color.white;
+            AudioManager.instance.PlaySFX(AudioManager.instance.fail);
         }
     }
 

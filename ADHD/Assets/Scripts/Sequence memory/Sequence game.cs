@@ -13,11 +13,11 @@ public class Sequencegame : MonoBehaviour
 
     private List<int> sequence = new List<int>();
     private int currentIndex = 0;
-    private bool playerTurn = false; 
+    private bool playerTurn = false;
     [SerializeField] private TextMeshProUGUI pointsLabel;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         // Generate initial sequence
         GenerateSequence();
@@ -26,7 +26,7 @@ public class Sequencegame : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (playerTurn)
         {
@@ -53,9 +53,14 @@ public class Sequencegame : MonoBehaviour
                                 score++;
                                 pointsLabel.text = "Points: " + score;
                                 currentIndex = 0;
+                                AudioManager.instance.PlaySFX(AudioManager.instance.success);
                                 // Generate and display next sequence
                                 GenerateSequence();
                                 StartCoroutine(DisplaySequence());
+                            }
+                            else
+                            {
+                                AudioManager.instance.PlaySFX(AudioManager.instance.buttonClick);
                             }
                         }
                         else
@@ -63,6 +68,7 @@ public class Sequencegame : MonoBehaviour
                             currentIndex = 0;
                             playerTurn = false;
                             error++;
+                            AudioManager.instance.PlaySFX(AudioManager.instance.fail);
                             tiles[tileIndex].GetComponent<SpriteRenderer>().color = Color.red; // Change tile color to green
                             StartCoroutine(ResetOnMiss(tiles[tileIndex], 2));
                         }
@@ -73,7 +79,7 @@ public class Sequencegame : MonoBehaviour
     }
 
     // Generate a random sequence of tile activations
-    void GenerateSequence()
+    private void GenerateSequence()
     {
         sequence.Clear();
         for (int i = 0; i < sequenceLength; i++)
@@ -83,26 +89,27 @@ public class Sequencegame : MonoBehaviour
     }
 
     // Display the sequence by activating tiles one by one
-    IEnumerator DisplaySequence()
+    private IEnumerator DisplaySequence()
     {
         playerTurn = false;
         foreach (int index in sequence)
         {
             yield return new WaitForSeconds(displayTime);
             tiles[index].gameObject.GetComponent<SpriteRenderer>().color = Color.yellow;
+            AudioManager.instance.PlaySFX(AudioManager.instance.buttonClick);
             yield return new WaitForSeconds(displayTime);
             tiles[index].gameObject.GetComponent<SpriteRenderer>().color = Color.white;
         }
         playerTurn = true;
     }
 
-    IEnumerator ResetTileColor(GameObject tile, float delay)
+    private IEnumerator ResetTileColor(GameObject tile, float delay)
     {
         yield return new WaitForSeconds(delay);
         tile.GetComponent<SpriteRenderer>().color = Color.white; // Reset tile color to white
     }
 
-    IEnumerator ResetOnMiss(GameObject tile, float delay)
+    private IEnumerator ResetOnMiss(GameObject tile, float delay)
     {
         yield return new WaitForSeconds(delay);
         tile.GetComponent<SpriteRenderer>().color = Color.white; // Reset tile color to white

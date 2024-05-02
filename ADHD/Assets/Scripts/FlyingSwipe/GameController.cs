@@ -20,12 +20,12 @@ public class GameController : MonoBehaviour
     // Minimum distance required for a swipe to be registered
     public float minSwipeDistance = 50f;
 
-    void Start()
+    private void Start()
     {
         timer = totalTime;
     }
 
-    void Update()
+    private void Update()
     {
         timer -= Time.deltaTime;
         UpdateTimerUI();
@@ -33,7 +33,7 @@ public class GameController : MonoBehaviour
         if (timer <= 0f)
         {
             GlobalManager globalManagerInstance = FindObjectOfType<GlobalManager>();
-            if(globalManagerInstance)
+            if (globalManagerInstance)
             {
                 globalManagerInstance.AddPoints(points);
                 globalManagerInstance.AddScene(SceneManager.GetActiveScene().name);
@@ -44,12 +44,12 @@ public class GameController : MonoBehaviour
         Swipe();
     }
 
-    void UpdateTimerUI()
+    private void UpdateTimerUI()
     {
         timeLabel.text = "" + Mathf.Round(timer);
     }
 
-    void Swipe()
+    private void Swipe()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -78,10 +78,12 @@ public class GameController : MonoBehaviour
                             if (swarm.swipeDirection == "Right")
                             {
                                 points++;
+                                AudioManager.instance.PlaySFX(AudioManager.instance.success);
                             }
                             else
                             {
                                 errors++;
+                                AudioManager.instance.PlaySFX(AudioManager.instance.fail);
                             }
                             swarm.Destroy();
                         }
@@ -91,10 +93,12 @@ public class GameController : MonoBehaviour
                             if (swarm.swipeDirection == "Left")
                             {
                                 points++;
+                                AudioManager.instance.PlaySFX(AudioManager.instance.success);
                             }
                             else
                             {
                                 errors++;
+                                AudioManager.instance.PlaySFX(AudioManager.instance.fail);
                             }
                             swarm.Destroy();
                         }
@@ -107,10 +111,12 @@ public class GameController : MonoBehaviour
                             if (swarm.swipeDirection == "Up")
                             {
                                 points++;
+                                AudioManager.instance.PlaySFX(AudioManager.instance.success);
                             }
                             else
                             {
                                 errors++;
+                                AudioManager.instance.PlaySFX(AudioManager.instance.fail);
                             }
                             swarm.Destroy();
                         }
@@ -120,19 +126,20 @@ public class GameController : MonoBehaviour
                             if (swarm.swipeDirection == "Down")
                             {
                                 points++;
+                                AudioManager.instance.PlaySFX(AudioManager.instance.success);
                             }
                             else
                             {
                                 errors++;
+                                AudioManager.instance.PlaySFX(AudioManager.instance.fail);
                             }
                             swarm.Destroy();
                         }
                     }
                     pointsLabel.text = "Points:" + points;
                     errorLabel.text = "Errors:" + errors;
-                }   
+                }
             }
         }
     }
 }
-

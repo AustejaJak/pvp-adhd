@@ -10,10 +10,10 @@ public class SimpleTable : MonoBehaviour
     private List<string> column1Data;
     private List<int> column2Data;
 
-    void Start()
+    private void Start()
     {
         GlobalManager globalManagerInstance = FindObjectOfType<GlobalManager>();
-        if(globalManagerInstance)
+        if (globalManagerInstance)
         {
             column1Data = globalManagerInstance.GetScenes().ToList();
             column2Data = globalManagerInstance.GetPoints().ToList();
@@ -24,7 +24,7 @@ public class SimpleTable : MonoBehaviour
         }
     }
 
-    string GenerateTable(List<string> column1, List<int> column2)
+    private string GenerateTable(List<string> column1, List<int> column2)
     {
         string tableText = "";
 
@@ -43,6 +43,7 @@ public class SimpleTable : MonoBehaviour
 
     public void Restart()
     {
+        AudioManager.instance.PlaySFX(AudioManager.instance.buttonClick);
         SceneManager.LoadScene(0);
     }
 }
