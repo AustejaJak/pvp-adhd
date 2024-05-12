@@ -251,7 +251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ballPrefab: {fileID: 738396488}
   fishPrefab: {fileID: 782127932}
-  numberOfFishToSpawn: 000000000100000002000000
+  numberOfFishToSpawn: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a000000
   spawnInterval: 2
   ballLaunched: 0
   TimeLabel: {fileID: 603479998}

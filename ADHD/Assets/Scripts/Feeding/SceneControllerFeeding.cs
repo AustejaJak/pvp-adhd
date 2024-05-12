@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
@@ -30,27 +31,32 @@ public class SceneControllerFeeding : MonoBehaviour
 
     void Update()
     {
+        int currentScore = int.Parse(ScoreLabel.text.Split(':')[1].Trim()) - 1; // Check if the current score equals the level requirement to progress
         spawnTimer += Time.deltaTime;
         gameTime += Time.deltaTime;
-
-        // Update timer text
-        if (TimeLabel != null)
+        if (TimeLabel != null) // Update timer text
         {
             TimeLabel.text = "Time: " + Mathf.Floor(gameTime).ToString();
         }
 
-        // Check if the current score equals the level requirement to progress
-        int currentScore = int.Parse(ScoreLabel.text.Split(':')[1].Trim()) - 1;
-        if (currentLevel < numberOfFishToSpawn.Length && currentScore >= numberOfFishToSpawn[currentLevel])
-        {
-            ProgressToNextLevel();
-        }
-        else if (currentLevel >= numberOfFishToSpawn.Length)//All levels played onto next game
+
+        if (gameTime >= 60f)//Out of time
         {
             SceneManager.LoadScene("concentration");
+            return;
         }
 
-        // Spawn a new ball if conditions are met
+        if (currentLevel < numberOfFishToSpawn.Length && currentScore >= numberOfFishToSpawn[currentLevel])
+        {
+            currentLevel++;
+            if (currentLevel >= numberOfFishToSpawn.Length)//All levels played onto next game
+            {
+                SceneManager.LoadScene("concentration");
+                return;
+            }
+            ProgressToNextLevel();
+        }
+
         if (spawnTimer >= spawnInterval)
         {
             SpawnBall();
@@ -123,8 +129,6 @@ public class SceneControllerFeeding : MonoBehaviour
 
     void ProgressToNextLevel()
     {
-        // Increment the current level index
-        currentLevel++;
         ScoreLabel.text = "Score: 0";
 
         // Reset the fish and spawn the next level's fish
@@ -147,6 +151,7 @@ public class SceneControllerFeeding : MonoBehaviour
         }
         Fish Script = fishPrefab.GetComponent<Fish>();
         Script.isFed = false;
+        Script.transform.position = new Vector3(Random.Range(minBounds.x, maxBounds.x), Random.Range(minBounds.y, maxBounds.y), 0f);
 
         // Clear the fish list
         fish.Clear();
