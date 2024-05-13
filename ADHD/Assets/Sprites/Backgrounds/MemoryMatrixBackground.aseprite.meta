@@ -121,7 +121,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: MemoryMatrixBackground
+  - name: MemoryMatrixBackground_Frame_0
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -132,7 +132,7 @@ ScriptedImporter:
       y: 4
       width: 90
       height: 200
-    spriteID: 7aeef15504ee00042aa13e2252416f52
+    spriteID: 1464b1ddd04033b46b4ea616e31db66a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -141,6 +141,246 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+  - name: MemoryMatrixBackground_Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 212
+      width: 90
+      height: 200
+    spriteID: 4e5bdec112e759249aa6fe850e3e3a97
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 212}
+  - name: MemoryMatrixBackground_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 420
+      width: 90
+      height: 200
+    spriteID: a40112b9e0a14e348b83b039395ab3b8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 420}
+  - name: MemoryMatrixBackground_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 628
+      width: 90
+      height: 200
+    spriteID: 2b9a0995d2e7510468deb7938f800931
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 628}
+  - name: MemoryMatrixBackground_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 102
+      y: 4
+      width: 90
+      height: 200
+    spriteID: d8ed32d03e793df43ae39a55fdea8282
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 102, y: 4}
+  - name: MemoryMatrixBackground_Frame_5
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 102
+      y: 212
+      width: 90
+      height: 200
+    spriteID: d1d49bbf226620242a9106ec7f8884ef
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 102, y: 212}
+  - name: MemoryMatrixBackground_Frame_6
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 102
+      y: 420
+      width: 90
+      height: 200
+    spriteID: f17f40866a1c83542a34f400a83a49a9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 102, y: 420}
+  - name: MemoryMatrixBackground_Frame_7
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 102
+      y: 628
+      width: 90
+      height: 200
+    spriteID: 81de638af90d26642a4b5f7f17d94c54
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 102, y: 628}
+  - name: MemoryMatrixBackground_Frame_8
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 4
+      width: 90
+      height: 200
+    spriteID: 876fd191fa82280408d5f9252569f1c0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 200, y: 4}
+  - name: MemoryMatrixBackground_Frame_9
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 212
+      width: 90
+      height: 200
+    spriteID: ab9b2dccbcdcd7f45a18052a21cad2d3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 200, y: 212}
+  - name: MemoryMatrixBackground_Frame_10
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 420
+      width: 90
+      height: 200
+    spriteID: da910041bd8d68542a0e46a38fdbadca
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 200, y: 420}
+  - name: MemoryMatrixBackground_Frame_11
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 628
+      width: 90
+      height: 200
+    spriteID: fa67910aec530ab43a66bb5e93d5a3d4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 200, y: 628}
+  - name: MemoryMatrixBackground_Frame_12
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 298
+      y: 4
+      width: 90
+      height: 200
+    spriteID: b21e14009d48ec04facb39fb7581cdf7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 298, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -150,14 +390,110 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: MemoryMatrixBackground
+    - name: MemoryMatrixBackground_Frame_0
       frameIndex: 0
       cellRect:
         x: 0
         y: 0
         width: 90
         height: 200
-      spriteId: 7aeef15504ee00042aa13e2252416f52
+      spriteId: 1464b1ddd04033b46b4ea616e31db66a
+    - name: MemoryMatrixBackground_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 200
+      spriteId: 4e5bdec112e759249aa6fe850e3e3a97
+    - name: MemoryMatrixBackground_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 200
+      spriteId: a40112b9e0a14e348b83b039395ab3b8
+    - name: MemoryMatrixBackground_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 200
+      spriteId: 2b9a0995d2e7510468deb7938f800931
+    - name: MemoryMatrixBackground_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 200
+      spriteId: d8ed32d03e793df43ae39a55fdea8282
+    - name: MemoryMatrixBackground_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 200
+      spriteId: d1d49bbf226620242a9106ec7f8884ef
+    - name: MemoryMatrixBackground_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 200
+      spriteId: f17f40866a1c83542a34f400a83a49a9
+    - name: MemoryMatrixBackground_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 200
+      spriteId: 81de638af90d26642a4b5f7f17d94c54
+    - name: MemoryMatrixBackground_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 200
+      spriteId: 876fd191fa82280408d5f9252569f1c0
+    - name: MemoryMatrixBackground_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 200
+      spriteId: ab9b2dccbcdcd7f45a18052a21cad2d3
+    - name: MemoryMatrixBackground_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 200
+      spriteId: da910041bd8d68542a0e46a38fdbadca
+    - name: MemoryMatrixBackground_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 200
+      spriteId: fa67910aec530ab43a66bb5e93d5a3d4
+    - name: MemoryMatrixBackground_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 200
+      spriteId: b21e14009d48ec04facb39fb7581cdf7
     linkedCells: []
     parentIndex: -1
   platformSettings: []
