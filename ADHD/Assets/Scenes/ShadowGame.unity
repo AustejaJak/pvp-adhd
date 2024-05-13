@@ -1267,6 +1267,7 @@ GameObject:
   - component: {fileID: 434822863}
   - component: {fileID: 434822862}
   - component: {fileID: 434822861}
+  - component: {fileID: 434822864}
   m_Layer: 0
   m_Name: Computer (1)
   m_TagString: Untagged
@@ -1392,6 +1393,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &434822864
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434822859}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fa707e9c500103146ab1136f0005bfbe, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &492174572
 GameObject:
   m_ObjectHideFlags: 0
@@ -1751,6 +1773,7 @@ GameObject:
   - component: {fileID: 613681962}
   - component: {fileID: 613681961}
   - component: {fileID: 613681960}
+  - component: {fileID: 613681963}
   m_Layer: 0
   m_Name: MainCharacter
   m_TagString: Untagged
@@ -1876,6 +1899,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &613681963
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613681958}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 059e06241929da54cb26172a5348d806, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &618825339
 GameObject:
   m_ObjectHideFlags: 0
@@ -1888,6 +1932,7 @@ GameObject:
   - component: {fileID: 618825343}
   - component: {fileID: 618825342}
   - component: {fileID: 618825344}
+  - component: {fileID: 618825345}
   m_Layer: 0
   m_Name: Computer
   m_TagString: Untagged
@@ -2023,6 +2068,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.15}
   m_EdgeRadius: 0
+--- !u!95 &618825345
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618825339}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a1ca79f1476d3064790e4eeb4144f7cb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &638821484
 GameObject:
   m_ObjectHideFlags: 0
@@ -2853,6 +2919,7 @@ GameObject:
   - component: {fileID: 1073958060}
   - component: {fileID: 1073958059}
   - component: {fileID: 1073958058}
+  - component: {fileID: 1073958061}
   m_Layer: 0
   m_Name: Lamp
   m_TagString: Untagged
@@ -2978,6 +3045,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1073958061
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073958056}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 56a3eb2d13bc7b8419fc2bacdb5bf0b2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1075392916
 GameObject:
   m_ObjectHideFlags: 0
@@ -2990,6 +3078,7 @@ GameObject:
   - component: {fileID: 1075392920}
   - component: {fileID: 1075392919}
   - component: {fileID: 1075392918}
+  - component: {fileID: 1075392921}
   m_Layer: 0
   m_Name: Statue
   m_TagString: Untagged
@@ -3115,6 +3204,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1075392921
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075392916}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fe9d2c68506de04ba06b3dd736c6309, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1080130203
 GameObject:
   m_ObjectHideFlags: 0
@@ -3127,6 +3237,7 @@ GameObject:
   - component: {fileID: 1080130204}
   - component: {fileID: 1080130206}
   - component: {fileID: 1080130207}
+  - component: {fileID: 1080130208}
   m_Layer: 0
   m_Name: Chair (1)
   m_TagString: Untagged
@@ -3277,6 +3388,27 @@ PolygonCollider2D:
       - {x: 0.10068127, y: 0.112940624}
       - {x: 0.07934385, y: 0.1364112}
   m_UseDelaunayMesh: 0
+--- !u!95 &1080130208
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080130203}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f016f5aa51670af4ea128aa1c1ef5ba2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1103297022
 GameObject:
   m_ObjectHideFlags: 0
@@ -3476,7 +3608,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6.253125
+  orthographic size: 6.666667
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4910,6 +5042,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1402786933}
   - component: {fileID: 1402786932}
+  - component: {fileID: 1402786934}
   m_Layer: 0
   m_Name: ShadowGameBackground
   m_TagString: Untagged
@@ -4984,6 +5117,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1402786934
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402786931}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 768d56d914d6a53458010574fdc56911, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1450466767
 GameObject:
   m_ObjectHideFlags: 0
@@ -5823,6 +5977,7 @@ GameObject:
   - component: {fileID: 1626870380}
   - component: {fileID: 1626870379}
   - component: {fileID: 1626870378}
+  - component: {fileID: 1626870381}
   m_Layer: 0
   m_Name: Globe
   m_TagString: Untagged
@@ -5948,6 +6103,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1626870381
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626870376}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 33ed20c983fb9f446ab105171691bff1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1728421782
 GameObject:
   m_ObjectHideFlags: 0

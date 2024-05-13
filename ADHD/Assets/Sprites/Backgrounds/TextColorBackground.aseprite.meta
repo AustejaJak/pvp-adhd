@@ -141,6 +141,306 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+  - name: TextColorBackground_Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 213
+      width: 90
+      height: 201
+    spriteID: cc5490b969f97dc44929933cda8a614e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 213}
+  - name: TextColorBackground_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 422
+      width: 90
+      height: 201
+    spriteID: 0c03b4bc1717d684cbfd7a91baea9853
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 422}
+  - name: TextColorBackground_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 631
+      width: 90
+      height: 201
+    spriteID: 5ef5b8aea5850824eb9e8d74425667b0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 631}
+  - name: TextColorBackground_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 102
+      y: 4
+      width: 90
+      height: 201
+    spriteID: 93fa495a6b3ecde4fa4bac153bd570c0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 102, y: 4}
+  - name: TextColorBackground_Frame_5
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 102
+      y: 213
+      width: 90
+      height: 201
+    spriteID: 2d140267a0891d24784cd34043d07814
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 102, y: 213}
+  - name: TextColorBackground_Frame_6
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 102
+      y: 422
+      width: 90
+      height: 201
+    spriteID: 675c151038851d94d981cea4f599d857
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 102, y: 422}
+  - name: TextColorBackground_Frame_7
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 102
+      y: 631
+      width: 90
+      height: 201
+    spriteID: fa4feba00b529f14ca88ad9292b8cfad
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 102, y: 631}
+  - name: TextColorBackground_Frame_8
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 4
+      width: 90
+      height: 201
+    spriteID: b045e9dee0911964d9a9e3fee5940436
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 200, y: 4}
+  - name: TextColorBackground_Frame_9
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 213
+      width: 90
+      height: 201
+    spriteID: 078c3e908a1686041b3f096ae02bb30f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 200, y: 213}
+  - name: TextColorBackground_Frame_10
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 422
+      width: 90
+      height: 201
+    spriteID: 8386af58d8a77bf42877c1eb55681f90
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 200, y: 422}
+  - name: TextColorBackground_Frame_11
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 631
+      width: 90
+      height: 201
+    spriteID: 978c6fb3e8b1c7842b10095f3ee8d14f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 200, y: 631}
+  - name: TextColorBackground_Frame_12
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 298
+      y: 4
+      width: 90
+      height: 201
+    spriteID: 3529ae338df7b944db81e94a6906c503
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 298, y: 4}
+  - name: TextColorBackground_Frame_13
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 298
+      y: 213
+      width: 90
+      height: 201
+    spriteID: 41e3f14befaee4d46ab3b93d50070d69
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 298, y: 213}
+  - name: TextColorBackground_Frame_14
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 298
+      y: 422
+      width: 90
+      height: 201
+    spriteID: 83cb83ea557408f49bf7f755da6c8afa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 298, y: 422}
+  - name: TextColorBackground_Frame_15
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 298
+      y: 631
+      width: 90
+      height: 201
+    spriteID: a55c47d9eee97a345a524b46ccfa43f6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 298, y: 631}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -150,7 +450,7 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: TextColorBackground
+    - name: TextColorBackground_Frame_0
       frameIndex: 0
       cellRect:
         x: 0
@@ -158,6 +458,126 @@ ScriptedImporter:
         width: 90
         height: 201
       spriteId: 1da92dd3f595888409a2a02251034c0d
+    - name: TextColorBackground_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 201
+      spriteId: cc5490b969f97dc44929933cda8a614e
+    - name: TextColorBackground_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 201
+      spriteId: 0c03b4bc1717d684cbfd7a91baea9853
+    - name: TextColorBackground_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 201
+      spriteId: 5ef5b8aea5850824eb9e8d74425667b0
+    - name: TextColorBackground_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 201
+      spriteId: 93fa495a6b3ecde4fa4bac153bd570c0
+    - name: TextColorBackground_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 201
+      spriteId: 2d140267a0891d24784cd34043d07814
+    - name: TextColorBackground_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 201
+      spriteId: 675c151038851d94d981cea4f599d857
+    - name: TextColorBackground_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 201
+      spriteId: fa4feba00b529f14ca88ad9292b8cfad
+    - name: TextColorBackground_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 201
+      spriteId: b045e9dee0911964d9a9e3fee5940436
+    - name: TextColorBackground_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 201
+      spriteId: 078c3e908a1686041b3f096ae02bb30f
+    - name: TextColorBackground_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 201
+      spriteId: 8386af58d8a77bf42877c1eb55681f90
+    - name: TextColorBackground_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 201
+      spriteId: 978c6fb3e8b1c7842b10095f3ee8d14f
+    - name: TextColorBackground_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 201
+      spriteId: 3529ae338df7b944db81e94a6906c503
+    - name: TextColorBackground_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 201
+      spriteId: 41e3f14befaee4d46ab3b93d50070d69
+    - name: TextColorBackground_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 201
+      spriteId: 83cb83ea557408f49bf7f755da6c8afa
+    - name: TextColorBackground_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 201
+      spriteId: a55c47d9eee97a345a524b46ccfa43f6
     linkedCells: []
     parentIndex: -1
   platformSettings: []

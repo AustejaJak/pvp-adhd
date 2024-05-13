@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7485f93262b615b48bd15772d8cd3488
+guid: ee50b138bca0aa54a8a74fbe222c2d8b
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -75,7 +75,7 @@ ScriptedImporter:
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
-    defaultPivotAlignment: 7
+    defaultPivotAlignment: 0
     customPivotPosition: {x: 0.5, y: 0.5}
     mosaicPadding: 4
     spritePadding: 0
@@ -88,7 +88,7 @@ ScriptedImporter:
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
-    defaultPivotAlignment: 7
+    defaultPivotAlignment: 0
     customPivotPosition: {x: 0.5, y: 0.5}
     mosaicPadding: 4
     spritePadding: 0
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 0
+  platformSettingsDirtyTick: 638512290794822935
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: ShadowGameBackground
+  - name: Chair 1_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 90
-      height: 200
-    spriteID: d6e21de27a36fce4cb42f6039a1d1809
+      width: 20
+      height: 27
+    spriteID: bd572ebaf1137934aae3d7cc20183c86
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -141,18 +141,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: ShadowGameBackground_Frame_1
+  - name: Chair 1_Frame_1
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 212
-      width: 90
-      height: 200
-    spriteID: a110d0398d019844d9e5ab766b8bbd8a
+      y: 39
+      width: 20
+      height: 27
+    spriteID: 967908a4409c3ca45b861092c9b803e1
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -160,19 +160,39 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 212}
-  - name: ShadowGameBackground_Frame_2
+    uvTransform: {x: 4, y: 39}
+  - name: Chair 1_Frame_2
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 102
+      x: 4
+      y: 74
+      width: 20
+      height: 27
+    spriteID: 29626215ea4892a4e8f2dbe9e6870a04
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 74}
+  - name: Chair 1_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
       y: 4
-      width: 90
-      height: 200
-    spriteID: 6763aa8c111b04c42ac015b1e91cf409
+      width: 20
+      height: 27
+    spriteID: f4f6c74c48d69a740bd6019697b8500c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -180,19 +200,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 102, y: 4}
-  - name: ShadowGameBackground_Frame_3
+    uvTransform: {x: 32, y: 4}
+  - name: Chair 1_Frame_4
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 102
-      y: 212
-      width: 90
-      height: 200
-    spriteID: 5619bc0eca89eac48b0b4e7014ccde13
+      x: 32
+      y: 39
+      width: 20
+      height: 27
+    spriteID: eb062859fa9640b4ab3abfdc3f5392ef
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -200,19 +220,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 102, y: 212}
-  - name: ShadowGameBackground_Frame_4
+    uvTransform: {x: 32, y: 39}
+  - name: Chair 1_Frame_5
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 200
-      y: 4
-      width: 90
-      height: 200
-    spriteID: b636b1398fc22d046ac84404f4fa7aac
+      x: 32
+      y: 74
+      width: 20
+      height: 27
+    spriteID: 6c4231541efdf69429b55c382a98062f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -220,144 +240,104 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 200, y: 4}
-  - name: ShadowGameBackground_Frame_5
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 200
-      y: 212
-      width: 90
-      height: 200
-    spriteID: 04f22d5b292d0b24ab3d395959e038b4
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 200, y: 212}
-  - name: ShadowGameBackground_Frame_6
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 298
-      y: 4
-      width: 90
-      height: 200
-    spriteID: 2f87a207a3586294faa54ff1e63a7a02
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 298, y: 4}
-  - name: ShadowGameBackground_Frame_7
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 298
-      y: 212
-      width: 90
-      height: 200
-    spriteID: 2424fff383b86e94e99049e3cb342d2e
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 298, y: 212}
+    uvTransform: {x: 32, y: 74}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1322494212
-    name: ShadowGameBackground
+    guid: 976460184
+    name: Chair 1
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: ShadowGameBackground_Frame_0
+    - name: Chair 1_Frame_0
       frameIndex: 0
       cellRect:
         x: 0
         y: 0
-        width: 90
-        height: 200
-      spriteId: d6e21de27a36fce4cb42f6039a1d1809
-    - name: ShadowGameBackground_Frame_1
+        width: 20
+        height: 27
+      spriteId: bd572ebaf1137934aae3d7cc20183c86
+    - name: Chair 1_Frame_1
       frameIndex: 1
       cellRect:
         x: 0
         y: 0
-        width: 90
-        height: 200
-      spriteId: a110d0398d019844d9e5ab766b8bbd8a
-    - name: ShadowGameBackground_Frame_2
+        width: 20
+        height: 27
+      spriteId: 967908a4409c3ca45b861092c9b803e1
+    - name: Chair 1_Frame_2
       frameIndex: 2
       cellRect:
         x: 0
         y: 0
-        width: 90
-        height: 200
-      spriteId: 6763aa8c111b04c42ac015b1e91cf409
-    - name: ShadowGameBackground_Frame_3
+        width: 20
+        height: 27
+      spriteId: 29626215ea4892a4e8f2dbe9e6870a04
+    - name: Chair 1_Frame_3
       frameIndex: 3
       cellRect:
         x: 0
         y: 0
-        width: 90
-        height: 200
-      spriteId: 5619bc0eca89eac48b0b4e7014ccde13
-    - name: ShadowGameBackground_Frame_4
+        width: 20
+        height: 27
+      spriteId: f4f6c74c48d69a740bd6019697b8500c
+    - name: Chair 1_Frame_4
       frameIndex: 4
       cellRect:
         x: 0
         y: 0
-        width: 90
-        height: 200
-      spriteId: b636b1398fc22d046ac84404f4fa7aac
-    - name: ShadowGameBackground_Frame_5
+        width: 20
+        height: 27
+      spriteId: eb062859fa9640b4ab3abfdc3f5392ef
+    - name: Chair 1_Frame_5
       frameIndex: 5
       cellRect:
         x: 0
         y: 0
-        width: 90
-        height: 200
-      spriteId: 04f22d5b292d0b24ab3d395959e038b4
-    - name: ShadowGameBackground_Frame_6
-      frameIndex: 6
-      cellRect:
-        x: 0
-        y: 0
-        width: 90
-        height: 200
-      spriteId: 2f87a207a3586294faa54ff1e63a7a02
-    - name: ShadowGameBackground_Frame_7
-      frameIndex: 7
-      cellRect:
-        x: 0
-        y: 0
-        width: 90
-        height: 200
-      spriteId: 2424fff383b86e94e99049e3cb342d2e
+        width: 20
+        height: 27
+      spriteId: 6c4231541efdf69429b55c382a98062f
     linkedCells: []
     parentIndex: -1
-  platformSettings: []
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 90, y: 200}
+  canvasSize: {x: 20, y: 27}

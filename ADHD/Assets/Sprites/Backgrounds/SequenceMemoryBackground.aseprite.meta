@@ -141,6 +141,226 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+  - name: SequenceMemoryBackground_Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 212
+      width: 90
+      height: 200
+    spriteID: d5f643e46cadeed45be7294dc270e10c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 212}
+  - name: SequenceMemoryBackground_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 420
+      width: 90
+      height: 200
+    spriteID: e6c5b80dbce2efe4ea5c4c9ec7aa8831
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 420}
+  - name: SequenceMemoryBackground_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 628
+      width: 90
+      height: 200
+    spriteID: a8408efc7f910b943aa49aff5529ecbc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 628}
+  - name: SequenceMemoryBackground_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 102
+      y: 4
+      width: 90
+      height: 200
+    spriteID: 33b206a4dc883984da5008321686f261
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 102, y: 4}
+  - name: SequenceMemoryBackground_Frame_5
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 102
+      y: 212
+      width: 90
+      height: 200
+    spriteID: ac1b40944ba2ad64b9cae1b36fc735a7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 102, y: 212}
+  - name: SequenceMemoryBackground_Frame_6
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 102
+      y: 420
+      width: 90
+      height: 200
+    spriteID: 62244608fb5be284db0cb28d9beca02a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 102, y: 420}
+  - name: SequenceMemoryBackground_Frame_7
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 102
+      y: 628
+      width: 90
+      height: 200
+    spriteID: 1c5e38691124a9f43bb8eb0a8d495b7e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 102, y: 628}
+  - name: SequenceMemoryBackground_Frame_8
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 4
+      width: 90
+      height: 200
+    spriteID: 3c9248f432595604a98e00ec7f7008d6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 200, y: 4}
+  - name: SequenceMemoryBackground_Frame_9
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 212
+      width: 90
+      height: 200
+    spriteID: f1ff8befda2cbd94d9dc7433b90e5c15
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 200, y: 212}
+  - name: SequenceMemoryBackground_Frame_10
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 420
+      width: 90
+      height: 200
+    spriteID: 10d9133fbd44f2f4991f8ee0a3bf14ec
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 200, y: 420}
+  - name: SequenceMemoryBackground_Frame_11
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 200
+      y: 628
+      width: 90
+      height: 200
+    spriteID: d786f3a0611e68948aeff055456f7ba5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 200, y: 628}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -150,7 +370,7 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: SequenceMemoryBackground
+    - name: SequenceMemoryBackground_Frame_0
       frameIndex: 0
       cellRect:
         x: 0
@@ -158,6 +378,94 @@ ScriptedImporter:
         width: 90
         height: 200
       spriteId: ffffefb241d8b1c468756b3b8f605f02
+    - name: SequenceMemoryBackground_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 200
+      spriteId: d5f643e46cadeed45be7294dc270e10c
+    - name: SequenceMemoryBackground_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 200
+      spriteId: e6c5b80dbce2efe4ea5c4c9ec7aa8831
+    - name: SequenceMemoryBackground_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 200
+      spriteId: a8408efc7f910b943aa49aff5529ecbc
+    - name: SequenceMemoryBackground_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 200
+      spriteId: 33b206a4dc883984da5008321686f261
+    - name: SequenceMemoryBackground_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 200
+      spriteId: ac1b40944ba2ad64b9cae1b36fc735a7
+    - name: SequenceMemoryBackground_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 200
+      spriteId: 62244608fb5be284db0cb28d9beca02a
+    - name: SequenceMemoryBackground_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 200
+      spriteId: 1c5e38691124a9f43bb8eb0a8d495b7e
+    - name: SequenceMemoryBackground_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 200
+      spriteId: 3c9248f432595604a98e00ec7f7008d6
+    - name: SequenceMemoryBackground_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 200
+      spriteId: f1ff8befda2cbd94d9dc7433b90e5c15
+    - name: SequenceMemoryBackground_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 200
+      spriteId: 10d9133fbd44f2f4991f8ee0a3bf14ec
+    - name: SequenceMemoryBackground_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 0
+        y: 0
+        width: 90
+        height: 200
+      spriteId: d786f3a0611e68948aeff055456f7ba5
     linkedCells: []
     parentIndex: -1
   platformSettings: []
