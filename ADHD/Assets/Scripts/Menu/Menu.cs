@@ -1,9 +1,20 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 public class Menu : MonoBehaviour
 {
     private AudioManager audioManager;
+
+    private void Start()
+    {
+        var savePath = Path.Combine(Application.persistentDataPath, "userdata.txt");
+
+        if (!File.Exists(savePath))
+        {
+            CreateSaveFile(savePath);
+        }
+    }
 
     private void Awake()
     {
@@ -14,5 +25,10 @@ public class Menu : MonoBehaviour
     {
         audioManager.PlaySFX(audioManager.buttonClick);
         SceneManager.LoadScene(sceneName);
+    }
+
+    private void CreateSaveFile(string savePath)
+    {
+        File.WriteAllText(savePath, "");
     }
 }
