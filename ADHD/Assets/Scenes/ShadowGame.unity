@@ -615,7 +615,6 @@ MonoBehaviour:
   items: {fileID: 508146885}
   panelScript: {fileID: 1543454193}
   points: 0
-  nextSceneName: Concentration
   missclickLabel: {fileID: 272032523}
 --- !u!4 &219078671
 Transform:

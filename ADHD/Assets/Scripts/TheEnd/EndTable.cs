@@ -9,6 +9,7 @@ public class SimpleTable : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textMeshProUGUI;
     private List<string> column1Data;
     private List<int> column2Data;
+    public DatabaseManager DBManager;
 
     private void Start()
     {
@@ -17,6 +18,10 @@ public class SimpleTable : MonoBehaviour
         {
             column1Data = globalManagerInstance.GetScenes().ToList();
             column2Data = globalManagerInstance.GetPoints().ToList();
+            if(PlayerPrefs.HasKey("PlayerID"))
+            {
+                DBManager.AddPoints(PlayerPrefs.GetInt("PlayerID"), column2Data.Sum());
+            }
             Destroy(globalManagerInstance.gameObject);
 
             string tableText = GenerateTable(column1Data, column2Data);

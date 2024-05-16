@@ -11,7 +11,6 @@ public class GameEvents : MonoBehaviour
     private List<GameObject> selectedObjects = new List<GameObject>();
     public BasePanel panelScript;
     public int points = 0;
-    public string nextSceneName;
     private int missclicks = 0;
     [SerializeField] private TextMeshProUGUI missclickLabel;
 
