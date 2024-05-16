@@ -13,9 +13,9 @@ public class SceneControllerFeeding : MonoBehaviour
     private List<GameObject> balls = new List<GameObject>(); // List to store references to active balls
     private List<GameObject> fish = new List<GameObject>(); // List to store references to active fish
     private float spawnTimer = 0; // Timer to track when to spawn the next ball or fish
-    private Vector3 spawnPosition = new Vector3(0, -4, 0); // Spawn position for the balls and fish
-    private Vector2 minBounds = new Vector2(-2f, -4f); // Minimum bounds for fish spawning
-    private Vector2 maxBounds = new Vector2(2f, 2f); // Maximum bounds for fish spawning
+    public Vector3 spawnPosition = new Vector3(0, -4, 0); // Spawn position for the balls and fish
+    public Vector2 minBounds = new Vector2(-2f, -4f); // Minimum bounds for fish spawning
+    public Vector2 maxBounds = new Vector2(2f, 2f); // Maximum bounds for fish spawning
     public bool ballLaunched = false; // Flag to track whether a ball has been launched
     private float gameTime = 0;
     [SerializeField] public TextMesh TimeLabel;

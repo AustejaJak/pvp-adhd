@@ -11,7 +11,7 @@ public class DatabaseManager : MonoBehaviour
 
     private void Awake()
     {
-        connectionString = "server=localhost;database=unity;user=root;password=root;";
+        connectionString = "server=localhost;database=unity;user=root;password=";
         connection = new MySqlConnection(connectionString);
     }
 

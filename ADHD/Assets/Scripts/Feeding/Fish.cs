@@ -3,8 +3,8 @@ using UnityEngine;
 public class Fish : MonoBehaviour
 {
     public float moveSpeed = 5f; // Speed of the fish
-    private Vector2 minBounds = new Vector2(-2f, -4f); // Minimum bounds for fish movement
-    private Vector2 maxBounds = new Vector2(2f, 2f); // Maximum bounds for fish movement
+    private Vector2 minBounds = new Vector2(-4f, -7f); // Minimum bounds for fish movement
+    private Vector2 maxBounds = new Vector2(4f, 8f); // Maximum bounds for fish movement
     private Vector3 targetPosition; // Target position for the fish
     public bool isFed = false; // Flag to track if the fish is fed
     private BoxCollider2D feedingAreaCollider; // Reference to the fish's BoxCollider2D component
