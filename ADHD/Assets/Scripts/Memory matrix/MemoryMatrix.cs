@@ -14,6 +14,7 @@ public class MemoryMatrix : MonoBehaviour
     public float yScaling = 0;
 
     private int score = 0;
+    private int errors = 0;
     private int level = 1;
     private int tilesGuessed;
     private int neededTiles;
@@ -81,7 +82,7 @@ public class MemoryMatrix : MonoBehaviour
         tilesGuessed++;
         if (tilesGuessed == neededTiles)
         {
-            score += level * 10;
+            score += 1;
             pointsLabel.text = "Points: " + score;
             if (level < maxLevels) level++;
             GenerateGrid(level);
@@ -99,6 +100,7 @@ public class MemoryMatrix : MonoBehaviour
         {
             level--;
         }
+        errors += 2;
         AudioManager.instance.PlaySFX(AudioManager.instance.fail);
         GenerateGrid(level);
     }
@@ -136,5 +138,10 @@ public class MemoryMatrix : MonoBehaviour
     public int GetPoints()
     {
         return score;
+    }
+
+    public int GetErrors()
+    {
+        return errors;
     }
 }

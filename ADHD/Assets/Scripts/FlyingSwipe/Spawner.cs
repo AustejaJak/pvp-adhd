@@ -27,8 +27,6 @@ public class Spawner : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(spawnInterval);
-
             GameObject randomSwarm = prefabToSpawn[Random.Range(0, prefabToSpawn.Length)];
             Transform randomSpawner = spawners[Random.Range(0, spawners.Length)];
             GameObject spawnedPrefab = Instantiate(randomSwarm, randomSpawner.position, Quaternion.identity);
@@ -75,6 +73,8 @@ public class Spawner : MonoBehaviour
             {
                 Debug.LogWarning("The prefab does not have a Rigidbody component.");
             }
+            
+            yield return new WaitForSeconds(spawnInterval);
         }
     }
 }

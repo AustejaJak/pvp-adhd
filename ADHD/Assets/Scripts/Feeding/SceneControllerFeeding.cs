@@ -42,7 +42,16 @@ public class SceneControllerFeeding : MonoBehaviour
 
         if (gameTime >= 60f)//Out of time
         {
-            SceneManager.LoadScene("concentration");
+            GlobalManager globalManagerInstance = FindObjectOfType<GlobalManager>();
+            if (globalManagerInstance)
+            {
+                int errors = int.Parse(ErrorLabel.text.Split(':')[1].Trim());
+                globalManagerInstance.AddScore((int)((currentLevel-(0.25*errors))*(10.0/8.0)));
+                globalManagerInstance.AddPoints(currentLevel);
+                globalManagerInstance.AddError(errors);
+                globalManagerInstance.AddScene(SceneManager.GetActiveScene().name);
+            }
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             return;
         }
 
@@ -51,7 +60,16 @@ public class SceneControllerFeeding : MonoBehaviour
             currentLevel++;
             if (currentLevel >= numberOfFishToSpawn.Length)//All levels played onto next game
             {
-                SceneManager.LoadScene("concentration");
+                GlobalManager globalManagerInstance = FindObjectOfType<GlobalManager>();
+                if (globalManagerInstance)
+                {
+                    int errors = int.Parse(ErrorLabel.text.Split(':')[1].Trim());
+                    globalManagerInstance.AddScore((int)((currentLevel-(0.25*errors))*(10.0/8.0)));
+                    globalManagerInstance.AddPoints(currentLevel);
+                    globalManagerInstance.AddError(errors);
+                    globalManagerInstance.AddScene(SceneManager.GetActiveScene().name);
+                }
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 return;
             }
             ProgressToNextLevel();

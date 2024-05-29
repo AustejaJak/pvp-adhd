@@ -8,6 +8,7 @@ public class RegisterUser : MonoBehaviour
 {
     public TMP_InputField usernameField;
     public TMP_InputField passwordField;
+    public TMP_InputField ageField;
     public DatabaseManager DBManager;
     
     public GameObject errorMessage;
@@ -20,6 +21,9 @@ public class RegisterUser : MonoBehaviour
     {
         string username = usernameField.text;
         string password = passwordField.text;
+        int age = int.Parse(ageField.text);
+
+        Debug.Log(age);
 
         bool empty = false;
         if (string.IsNullOrEmpty(username))
@@ -32,9 +36,14 @@ public class RegisterUser : MonoBehaviour
             passwordField.placeholder.GetComponent<TMP_Text>().text = "Please enter a password";
             empty = true;
         }
+        if (age == null)
+        {
+            passwordField.placeholder.GetComponent<TMP_Text>().text = "Please enter your age";
+            empty = true;
+        }
         if (empty) return;
 
-        if(DBManager.RegisterUser(username, password))
+        if(DBManager.RegisterUser(username, password, age))
         {  
             gameObject.SetActive(false);
             errorMessage.SetActive(false);

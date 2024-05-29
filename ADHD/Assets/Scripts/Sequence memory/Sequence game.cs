@@ -121,4 +121,9 @@ public class Sequencegame : MonoBehaviour
     {
         return score;
     }
+
+    public int GetErrors()
+    {
+        return error;
+    }
 }

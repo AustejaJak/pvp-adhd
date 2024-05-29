@@ -121,4 +121,9 @@ public class TextColor : MonoBehaviour
     {
         return points;
     }
+
+    public int GetErrors()
+    {
+        return wrong;
+    }
 }

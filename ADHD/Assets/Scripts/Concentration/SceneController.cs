@@ -152,7 +152,9 @@ public class SceneController : MonoBehaviour
             GlobalManager globalManagerInstance = FindObjectOfType<GlobalManager>();
             if (globalManagerInstance)
             {
+                globalManagerInstance.AddScore((int)((6-(5*elapsedTime/60.0)-(0.25*_error))*(10.0/6.0)));
                 globalManagerInstance.AddPoints((int)elapsedTime);
+                globalManagerInstance.AddError(_error);
                 globalManagerInstance.AddScene(SceneManager.GetActiveScene().name);
             }
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

@@ -22,11 +22,13 @@ public class TimerMemoryMatrix : MonoBehaviour
 
         if (timer <= 0f)
         {
-            MemoryMatrix textColorInstance = FindObjectOfType<MemoryMatrix>();
+            MemoryMatrix memoryMatrixInstance = FindObjectOfType<MemoryMatrix>();
             GlobalManager globalManagerInstance = FindObjectOfType<GlobalManager>();
-            if(globalManagerInstance && textColorInstance)
+            if(globalManagerInstance && memoryMatrixInstance)
             {
-                globalManagerInstance.AddPoints(textColorInstance.GetPoints());
+                globalManagerInstance.AddScore((int)((memoryMatrixInstance.GetPoints()-(0.5*memoryMatrixInstance.GetErrors()))*(10.0/memoryMatrixInstance.GetPoints())));
+                globalManagerInstance.AddPoints(memoryMatrixInstance.GetPoints());
+                globalManagerInstance.AddError(memoryMatrixInstance.GetErrors());
                 globalManagerInstance.AddScene(SceneManager.GetActiveScene().name);
             }
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

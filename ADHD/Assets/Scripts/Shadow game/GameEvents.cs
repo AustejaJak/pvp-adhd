@@ -74,9 +74,12 @@ public class GameEvents : MonoBehaviour
         {
             SceneTimer sceneTimerInstance = FindObjectOfType<SceneTimer>();
             GlobalManager globalManagerInstance = FindObjectOfType<GlobalManager>();
+            int time = sceneTimerInstance.GetTotalSeconds();
             if(sceneTimerInstance && globalManagerInstance)
             {
-                globalManagerInstance.AddPoints(sceneTimerInstance.GetTotalSeconds());
+                globalManagerInstance.AddScore((int)((8-(5.0*time/60.0)-(0.5*missclicks))*(10.0/8.0)));
+                globalManagerInstance.AddPoints(time);
+                globalManagerInstance.AddError(missclicks);
                 globalManagerInstance.AddScene(SceneManager.GetActiveScene().name);
             }
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

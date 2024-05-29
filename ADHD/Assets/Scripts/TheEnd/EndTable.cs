@@ -7,8 +7,10 @@ using UnityEngine.SceneManagement;
 public class SimpleTable : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI textMeshProUGUI;
-    private List<string> column1Data;
-    private List<int> column2Data;
+    private List<string> scenes;
+    private List<int> points;
+    private List<int> errors;
+    private List<int> scores;
     public DatabaseManager DBManager;
 
     private void Start()
@@ -16,15 +18,21 @@ public class SimpleTable : MonoBehaviour
         GlobalManager globalManagerInstance = FindObjectOfType<GlobalManager>();
         if (globalManagerInstance)
         {
-            column1Data = globalManagerInstance.GetScenes().ToList();
-            column2Data = globalManagerInstance.GetPoints().ToList();
+            scenes = globalManagerInstance.GetScenes().ToList();
+            scores = globalManagerInstance.GetScores().ToList();
+            errors = globalManagerInstance.GetErrors().ToList();
+            points = globalManagerInstance.GetPoints().ToList();
+
             if(PlayerPrefs.HasKey("PlayerID"))
             {
-                DBManager.AddPoints(PlayerPrefs.GetInt("PlayerID"), column2Data.Sum());
+                if(PlayerPrefs.GetInt("PlayerID", -1) >= 0)
+                {
+                    DBManager.AddPoints(PlayerPrefs.GetInt("PlayerID", -1), scores, scenes, errors, points);
+                }
             }
             Destroy(globalManagerInstance.gameObject);
 
-            string tableText = GenerateTable(column1Data, column2Data);
+            string tableText = GenerateTable(scenes, scores);
             textMeshProUGUI.text = tableText;
         }
     }

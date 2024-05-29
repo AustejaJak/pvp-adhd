@@ -5,37 +5,36 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    public float totalTime = 60f;
-    private float timer;
+    private float timer = 0f;
     [SerializeField] private TextMeshProUGUI timeLabel;
     [SerializeField] private TextMeshProUGUI pointsLabel;
     [SerializeField] private TextMeshProUGUI errorLabel;
+    public int pointsNeeded = 10;
     private int errors = 0;
     private int points = 0;
 
     private Vector2 startTouchPosition;
     private Vector2 endTouchPosition;
     private bool isSwiping = false;
-
-    // Minimum distance required for a swipe to be registered
     public float minSwipeDistance = 50f;
 
     private void Start()
     {
-        timer = totalTime;
     }
 
     private void Update()
     {
-        timer -= Time.deltaTime;
+        timer += Time.deltaTime;
         UpdateTimerUI();
 
-        if (timer <= 0f)
+        if (pointsNeeded <= points)
         {
             GlobalManager globalManagerInstance = FindObjectOfType<GlobalManager>();
             if (globalManagerInstance)
             {
-                globalManagerInstance.AddPoints(points);
+                globalManagerInstance.AddScore((int)(10-(2*(timer)/60.0)-(errors*0.5)));
+                globalManagerInstance.AddPoints((int)timer);
+                globalManagerInstance.AddError(errors);
                 globalManagerInstance.AddScene(SceneManager.GetActiveScene().name);
             }
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

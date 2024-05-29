@@ -25,7 +25,11 @@ public class TextColorCountdown : MonoBehaviour
             GlobalManager globalManagerInstance = FindObjectOfType<GlobalManager>();
             if(globalManagerInstance && textColorInstance)
             {
-                globalManagerInstance.AddPoints(textColorInstance.GetPoints());
+                int points = textColorInstance.GetPoints();
+                int errors = textColorInstance.GetErrors();
+                globalManagerInstance.AddScore((int)((points-(0.5*errors))*(10.0/40.0)));
+                globalManagerInstance.AddPoints(points);
+                globalManagerInstance.AddError(errors);
                 globalManagerInstance.AddScene(SceneManager.GetActiveScene().name);
             }
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

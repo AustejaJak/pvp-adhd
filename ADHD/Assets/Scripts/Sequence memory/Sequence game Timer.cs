@@ -22,11 +22,15 @@ public class SequencegameTimer : MonoBehaviour
 
         if (timer <= 0f)
         {
-            Sequencegame textColorInstance = FindObjectOfType<Sequencegame>();
+            Sequencegame sequenceGame = FindObjectOfType<Sequencegame>();
             GlobalManager globalManagerInstance = FindObjectOfType<GlobalManager>();
-            if(globalManagerInstance && textColorInstance)
+            if(globalManagerInstance && sequenceGame)
             {
-                globalManagerInstance.AddPoints(textColorInstance.GetPoints());
+                int points = sequenceGame.GetPoints();
+                int errors = sequenceGame.GetErrors();
+                globalManagerInstance.AddScore((int)(points*(10.0/15.0)));
+                globalManagerInstance.AddPoints(points);
+                globalManagerInstance.AddError(errors);
                 globalManagerInstance.AddScene(SceneManager.GetActiveScene().name);
             }
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

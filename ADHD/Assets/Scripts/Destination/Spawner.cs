@@ -33,7 +33,9 @@ public class TrainSpawner : MonoBehaviour
             GlobalManager globalManagerInstance = FindObjectOfType<GlobalManager>();
             if (globalManagerInstance)
             {
+                globalManagerInstance.AddScore((int)((score-(0.25*error))*(10.0/25.0)));
                 globalManagerInstance.AddPoints(score);
+                globalManagerInstance.AddError(error);
                 globalManagerInstance.AddScene(SceneManager.GetActiveScene().name);
             }
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

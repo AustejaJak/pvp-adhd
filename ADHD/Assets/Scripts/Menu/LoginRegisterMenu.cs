@@ -35,12 +35,12 @@ public class LoginRegisterMenu : MonoBehaviour
             }
 
             // Add a new row for each score
-            foreach (DataRow row in scores.Rows)
+            /*foreach (DataRow row in scores.Rows)
             {
                 GameObject tableRow = Instantiate(TableRowPrefab, TableContainer);
                 Text scoreText = tableRow.GetComponentInChildren<Text>();
                 scoreText.text = "Points: " + row["points"];
-            }
+            }*/
         }
         else
         {
