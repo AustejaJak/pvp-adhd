@@ -299,7 +299,7 @@ public class DatabaseManager : MonoBehaviour
         }
     }
 
-    public DataTable GetPlayerScores(int playerId)
+    /*public DataTable GetPlayerScores(int playerId)
     {
         try
         {
@@ -324,7 +324,7 @@ public class DatabaseManager : MonoBehaviour
         {
             CloseConnection();
         }
-    }
+    }*/
 
     public string GetPlayerUsername(int playerId)
     {
