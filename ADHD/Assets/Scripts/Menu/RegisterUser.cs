@@ -36,7 +36,7 @@ public class RegisterUser : MonoBehaviour
             passwordField.placeholder.GetComponent<TMP_Text>().text = "Please enter a password";
             empty = true;
         }
-        if (age == null)
+        if (string.IsNullOrEmpty(ageField.text))
         {
             passwordField.placeholder.GetComponent<TMP_Text>().text = "Please enter your age";
             empty = true;

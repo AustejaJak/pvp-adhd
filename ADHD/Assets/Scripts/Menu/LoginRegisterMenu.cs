@@ -26,7 +26,7 @@ public class LoginRegisterMenu : MonoBehaviour
             int playerId = PlayerPrefs.GetInt("PlayerID");
             UsernameText.text = DatabaseManager.GetPlayerUsername(playerId);
 
-            DataTable scores = DatabaseManager.GetPlayerScores(playerId);
+            //DataTable scores = DatabaseManager.GetPlayerScores(playerId);
 
             // Clear the table
             foreach (Transform child in TableContainer)
