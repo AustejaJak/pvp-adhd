@@ -26,7 +26,7 @@ public class TimerMemoryMatrix : MonoBehaviour
             GlobalManager globalManagerInstance = FindObjectOfType<GlobalManager>();
             if(globalManagerInstance && memoryMatrixInstance)
             {
-                globalManagerInstance.AddScore((int)((memoryMatrixInstance.GetPoints()-(0.5*memoryMatrixInstance.GetErrors()))*(10.0/memoryMatrixInstance.GetPoints())));
+                globalManagerInstance.AddScore((int)((memoryMatrixInstance.GetPoints()-(0.5*memoryMatrixInstance.GetErrors()))*(10.0/memoryMatrixInstance.GetPoints())*10));
                 globalManagerInstance.AddPoints(memoryMatrixInstance.GetPoints());
                 globalManagerInstance.AddError(memoryMatrixInstance.GetErrors());
                 globalManagerInstance.AddScene(SceneManager.GetActiveScene().name);

@@ -32,7 +32,7 @@ public class GameController : MonoBehaviour
             GlobalManager globalManagerInstance = FindObjectOfType<GlobalManager>();
             if (globalManagerInstance)
             {
-                globalManagerInstance.AddScore((int)(10-(2*(timer)/60.0)-(errors*0.5)));
+                globalManagerInstance.AddScore((int)(10-(2*(timer)/60.0)-(errors*0.5)*10));
                 globalManagerInstance.AddPoints((int)timer);
                 globalManagerInstance.AddError(errors);
                 globalManagerInstance.AddScene(SceneManager.GetActiveScene().name);

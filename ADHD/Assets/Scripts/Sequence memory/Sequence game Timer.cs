@@ -28,7 +28,7 @@ public class SequencegameTimer : MonoBehaviour
             {
                 int points = sequenceGame.GetPoints();
                 int errors = sequenceGame.GetErrors();
-                globalManagerInstance.AddScore((int)(points*(10.0/15.0)));
+                globalManagerInstance.AddScore((int)(points*(10.0/15.0)*10));
                 globalManagerInstance.AddPoints(points);
                 globalManagerInstance.AddError(errors);
                 globalManagerInstance.AddScene(SceneManager.GetActiveScene().name);

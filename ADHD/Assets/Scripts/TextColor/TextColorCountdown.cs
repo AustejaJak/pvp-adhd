@@ -27,7 +27,7 @@ public class TextColorCountdown : MonoBehaviour
             {
                 int points = textColorInstance.GetPoints();
                 int errors = textColorInstance.GetErrors();
-                globalManagerInstance.AddScore((int)((points-(0.5*errors))*(10.0/40.0)));
+                globalManagerInstance.AddScore((int)((points-(0.5*errors))*(10.0/40.0)*10));
                 globalManagerInstance.AddPoints(points);
                 globalManagerInstance.AddError(errors);
                 globalManagerInstance.AddScene(SceneManager.GetActiveScene().name);

@@ -40,13 +40,15 @@ public class Swarm : MonoBehaviour
 
     public void Destroy()
     {
+        Spawner spawner = FindObjectOfType<Spawner>();
+        if (spawner != null) spawner.SetReadToSpawn();
         Destroy(gameObject);
     }
     void Update()
     {
         if (gameObject.transform.position.x < -5 || gameObject.transform.position.x > 5 || gameObject.transform.position.y > 9 || gameObject.transform.position.y < -9)
         {
-            Destroy(gameObject);
+            Destroy();
         }
     }
 }

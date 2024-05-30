@@ -36,6 +36,8 @@ public class LoginUser : MonoBehaviour
 
         if(DBManager.LoginUser(username, password))
         {
+            usernameField.text = "";
+            passwordField.text = "";
             gameObject.SetActive(false);
             errorMessage.SetActive(false);
         }

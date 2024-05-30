@@ -299,7 +299,7 @@ public class DatabaseManager : MonoBehaviour
         }
     }
 
-    /*public DataTable GetPlayerScores(int playerId)
+    public List<ScoreSum> GetPlayerScoreSum(int playerId)
     {
         try
         {
@@ -307,24 +307,176 @@ public class DatabaseManager : MonoBehaviour
 
             using MySqlCommand cmd = _connection.CreateCommand();
             cmd.CommandText =
-                "SELECT players.username, games.points FROM games INNER JOIN players ON games.user_ID = players.id WHERE games.user_ID = @userId ORDER BY games.date DESC";
+                @"SELECT
+                    id,
+                    date,
+                    COALESCE(concentrationScore, 0) +
+                    COALESCE(destinationScore, 0) +
+                    COALESCE(dualnBackScore, 0) +
+                    COALESCE(feedingScore, 0) +
+                    COALESCE(swipeScore, 0) +
+                    COALESCE(matrixScore, 0) +
+                    COALESCE(sequenceScore, 0) +
+                    COALESCE(shadowScore, 0) +
+                    COALESCE(textColorScore, 0) AS TotalScore
+                FROM games WHERE user_ID = @userId;";
             cmd.Parameters.AddWithValue("@userId", playerId);
 
-            using MySqlDataReader reader = cmd.ExecuteReader();
-            DataTable scores = new DataTable();
-            scores.Load(reader);
-            return scores;
+            MySqlDataReader reader = cmd.ExecuteReader();
+            List<ScoreSum> scoreSums = new List<ScoreSum>();
+
+            while (reader.Read())
+            {
+                var scoreSum = new ScoreSum
+                {
+                    Id = reader.GetInt32(0),
+                    Date = reader.GetDateTime(1),
+                    TotalScore = reader.GetInt32(2)
+                };
+                scoreSums.Add(scoreSum);
+            }
+            reader.Close();
+            CloseConnection();
+            return scoreSums;
         }
         catch (Exception ex)
         {
             Debug.Log("Error getting player scores: " + ex.Message);
             return null;
         }
-        finally
+    }
+
+    public List<ScoreSum> GetPlayerTimeSum(int playerId)
+    {
+        try
         {
+            OpenConnection();
+
+            using MySqlCommand cmd = _connection.CreateCommand();
+            cmd.CommandText =
+                @"SELECT
+                    id,
+                    date,
+                    COALESCE(concentrationPoints, 0) +
+                    COALESCE(swipePoints, 0) +
+                    COALESCE(shadowPoints, 0) AS TotalTime
+                FROM games WHERE user_ID = @userId;";
+            cmd.Parameters.AddWithValue("@userId", playerId);
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+            List<ScoreSum> scoreSums = new List<ScoreSum>();
+
+            while (reader.Read())
+            {
+                var scoreSum = new ScoreSum
+                {
+                    Id = reader.GetInt32(0),
+                    Date = reader.GetDateTime(1),
+                    TotalScore = reader.GetInt32(2)
+                };
+                scoreSums.Add(scoreSum);
+            }
+            reader.Close();
             CloseConnection();
+            return scoreSums;
         }
-    }*/
+        catch (Exception ex)
+        {
+            Debug.Log("Error getting player times: " + ex.Message);
+            return null;
+        }
+    }
+   
+   public List<ScoreSum> GetPlayerPointSum(int playerId)
+    {
+        try
+        {
+            OpenConnection();
+
+            using MySqlCommand cmd = _connection.CreateCommand();
+            cmd.CommandText =
+                @"SELECT
+                    id,
+                    date,
+                    COALESCE(destinationPoints, 0) +
+                    COALESCE(dualnBackPoints, 0) +
+                    COALESCE(feedingPoints, 0) +
+                    COALESCE(matrixPoints, 0) +
+                    COALESCE(sequencePoints, 0) +
+                    COALESCE(textColorPoints, 0) AS TotalPoints
+                FROM games WHERE user_ID = @userId;";
+            cmd.Parameters.AddWithValue("@userId", playerId);
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+            List<ScoreSum> scoreSums = new List<ScoreSum>();
+
+            while (reader.Read())
+            {
+                var scoreSum = new ScoreSum
+                {
+                    Id = reader.GetInt32(0),
+                    Date = reader.GetDateTime(1),
+                    TotalScore = reader.GetInt32(2)
+                };
+                scoreSums.Add(scoreSum);
+            }
+            reader.Close();
+            CloseConnection();
+            return scoreSums;
+        }
+        catch (Exception ex)
+        {
+            Debug.Log("Error getting player points: " + ex.Message);
+            return null;
+        }
+    }
+
+    public List<ScoreSum> GetPlayerErrorSum(int playerId)
+    {
+        try
+        {
+            OpenConnection();
+
+            using MySqlCommand cmd = _connection.CreateCommand();
+            cmd.CommandText =
+                @"SELECT
+                    id,
+                    date,
+                    COALESCE(concentrationErrors, 0) +
+                    COALESCE(destinationErrors, 0) +
+                    COALESCE(dualnBackErrors, 0) +
+                    COALESCE(feedingErrors, 0) +
+                    COALESCE(swipeErrors, 0) +
+                    COALESCE(matrixErrors, 0) +
+                    COALESCE(sequenceErrors, 0) +
+                    COALESCE(shadowErrors, 0) +
+                    COALESCE(textColorErrors, 0) AS TotalErrors
+                FROM games WHERE user_ID = @userId;";
+            cmd.Parameters.AddWithValue("@userId", playerId);
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+            List<ScoreSum> scoreSums = new List<ScoreSum>();
+
+            while (reader.Read())
+            {
+                var scoreSum = new ScoreSum
+                {
+                    Id = reader.GetInt32(0),
+                    Date = reader.GetDateTime(1),
+                    TotalScore = reader.GetInt32(2)
+                };
+                scoreSums.Add(scoreSum);
+            }
+            reader.Close();
+            CloseConnection();
+            return scoreSums;
+        }
+        catch (Exception ex)
+        {
+            Debug.Log("Error getting player errors: " + ex.Message);
+            return null;
+        }
+    }
 
     public string GetPlayerUsername(int playerId)
     {
@@ -358,7 +510,259 @@ public class DatabaseManager : MonoBehaviour
         }
     }
 
+    public int GetPlayerAge(int playerId)
+    {
+        try
+        {
+            OpenConnection();
+
+            using MySqlCommand cmd = _connection.CreateCommand();
+            cmd.CommandText = "SELECT age FROM players WHERE id = @userId";
+            cmd.Parameters.AddWithValue("@userId", playerId);
+
+            object result = cmd.ExecuteScalar();
+            if (result != null)
+            {
+                return int.Parse(result.ToString());
+            }
+            else
+            {
+                Debug.Log("Error getting player username: No user found with ID " + playerId);
+                return -1;
+            }
+        }
+        catch (Exception ex)
+        {
+            Debug.Log("Error getting player username: " + ex.Message);
+            return -1;
+        }
+        finally
+        {
+            CloseConnection();
+        }
+    }
+
+    public double GetAverageScoreByAge(int playerId)
+    {
+        int age = GetPlayerAge(playerId);
+        List<int> ageRanges = AgeLimit(age);
+        double average_score = 0;
+
+        try
+        {
+            OpenConnection();
+
+            using MySqlCommand cmd = _connection.CreateCommand();
+            cmd.CommandText =
+                @"SELECT AVG(total_score) AS average_score FROM
+                (
+                SELECT(
+                    COALESCE(concentrationScore, 0) +
+                    COALESCE(destinationScore, 0) +
+                    COALESCE(dualnBackScore, 0) +
+                    COALESCE(feedingScore, 0) +
+                    COALESCE(swipeScore, 0) +
+                    COALESCE(matrixScore, 0) +
+                    COALESCE(sequenceScore, 0) +
+                    COALESCE(shadowScore, 0) +
+                    COALESCE(textColorScore, 0)) AS total_score, players.age
+                FROM games
+                INNER JOIN players ON games.user_ID = players.id
+                WHERE @lowerLimit <= players.age AND @upperLimit >= players.age
+                ) AS scores;";
+            cmd.Parameters.AddWithValue("@lowerLimit", ageRanges[0]);
+            cmd.Parameters.AddWithValue("@upperLimit", ageRanges[1]);
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+            List<ScoreSum> scoreSums = new List<ScoreSum>();
+
+            while (reader.Read())
+            {
+                average_score = reader.GetDouble("average_score");
+            }
+            reader.Close();
+            CloseConnection();
+            return average_score;
+        }
+        catch (Exception ex)
+        {
+            Debug.Log("Error getting average scores: " + ex.Message);
+            return -1;
+        }
+    }
+
+    public double GetAverageErrorByAge(int playerId)
+    {
+        int age = GetPlayerAge(playerId);
+        List<int> ageRanges = AgeLimit(age);
+        double average_score = 0;
+
+        try
+        {
+            OpenConnection();
+
+            using MySqlCommand cmd = _connection.CreateCommand();
+            cmd.CommandText =
+                @"SELECT AVG(total_score) AS average_score FROM
+                (
+                SELECT(
+                    COALESCE(concentrationErrors, 0) +
+                    COALESCE(destinationErrors, 0) +
+                    COALESCE(dualnBackErrors, 0) +
+                    COALESCE(feedingErrors, 0) +
+                    COALESCE(swipeErrors, 0) +
+                    COALESCE(matrixErrors, 0) +
+                    COALESCE(sequenceErrors, 0) +
+                    COALESCE(shadowErrors, 0) +
+                    COALESCE(textColorErrors, 0)) AS total_score, players.age
+                FROM games
+                INNER JOIN players ON games.user_ID = players.id
+                WHERE @lowerLimit <= players.age AND @upperLimit >= players.age
+                ) AS scores;";
+            cmd.Parameters.AddWithValue("@lowerLimit", ageRanges[0]);
+            cmd.Parameters.AddWithValue("@upperLimit", ageRanges[1]);
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+            List<ScoreSum> scoreSums = new List<ScoreSum>();
+
+            while (reader.Read())
+            {
+                average_score = reader.GetDouble("average_score");
+            }
+            reader.Close();
+            CloseConnection();
+            return average_score;
+        }
+        catch (Exception ex)
+        {
+            Debug.Log("Error getting average errors: " + ex.Message);
+            return -1;
+        }
+    }
+
+    public double GetAverageTimeByAge(int playerId)
+    {
+        int age = GetPlayerAge(playerId);
+        List<int> ageRanges = AgeLimit(age);
+        double average_score = 0;
+
+        try
+        {
+            OpenConnection();
+
+            using MySqlCommand cmd = _connection.CreateCommand();
+            cmd.CommandText =
+                @"SELECT AVG(total_score) AS average_score FROM
+                (
+                SELECT(
+                    COALESCE(concentrationPoints, 0) +
+                    COALESCE(swipePoints, 0) +
+                    COALESCE(shadowPoints, 0)) AS total_score, players.age
+                FROM games
+                INNER JOIN players ON games.user_ID = players.id
+                WHERE @lowerLimit <= players.age AND @upperLimit >= players.age
+                ) AS scores;";
+            cmd.Parameters.AddWithValue("@lowerLimit", ageRanges[0]);
+            cmd.Parameters.AddWithValue("@upperLimit", ageRanges[1]);
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+            List<ScoreSum> scoreSums = new List<ScoreSum>();
+
+            while (reader.Read())
+            {
+                average_score = reader.GetDouble("average_score");
+            }
+            reader.Close();
+            CloseConnection();
+            return average_score;
+        }
+        catch (Exception ex)
+        {
+            Debug.Log("Error getting average time: " + ex.Message);
+            return -1;
+        }
+    }
+
+    public double GetAveragePointByAge(int playerId)
+    {
+        int age = GetPlayerAge(playerId);
+        List<int> ageRanges = AgeLimit(age);
+        double average_score = 0;
+
+        try
+        {
+            OpenConnection();
+
+            using MySqlCommand cmd = _connection.CreateCommand();
+            cmd.CommandText =
+                @"SELECT AVG(total_score) AS average_score FROM
+                (
+                SELECT(
+                    COALESCE(destinationPoints, 0) +
+                    COALESCE(dualnBackPoints, 0) +
+                    COALESCE(feedingPoints, 0) +
+                    COALESCE(matrixPoints, 0) +
+                    COALESCE(sequencePoints, 0) +
+                    COALESCE(textColorPoints, 0)) AS total_score, players.age
+                FROM games
+                INNER JOIN players ON games.user_ID = players.id
+                WHERE @lowerLimit <= players.age AND @upperLimit >= players.age
+                ) AS scores;";
+            cmd.Parameters.AddWithValue("@lowerLimit", ageRanges[0]);
+            cmd.Parameters.AddWithValue("@upperLimit", ageRanges[1]);
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+            List<ScoreSum> scoreSums = new List<ScoreSum>();
+
+            while (reader.Read())
+            {
+                average_score = reader.GetDouble("average_score");
+            }
+            reader.Close();
+            CloseConnection();
+            return average_score;
+        }
+        catch (Exception ex)
+        {
+            Debug.Log("Error getting average points: " + ex.Message);
+            return -1;
+        }
+    }
+
+    private List<int> AgeLimit(int age)
+    {
+        List<int> ageLimit = new List<int>();
+
+        if (age >= 0 && age <= 15)
+        {
+            ageLimit.Add(0);
+            ageLimit.Add(15);
+        }
+        else if (age >= 16 && age <= 25)
+        {
+            ageLimit.Add(16);
+            ageLimit.Add(25);
+        }
+        else if (age >= 26 && age <= 35)
+        {
+            ageLimit.Add(26);
+            ageLimit.Add(35);
+        }
+        else if (age >= 36 && age <= 45)
+        {
+            ageLimit.Add(36);
+            ageLimit.Add(45);
+        }
+        else
+        {
+            ageLimit.Add(46);
+            ageLimit.Add(200);
+        }
+
+        return ageLimit;
+    }
 }
+
 
 public class GameMetrics
 {

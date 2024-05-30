@@ -4,6 +4,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using System.Collections.Generic;
+using System.Linq;
 
 public class LoginRegisterMenu : MonoBehaviour
 {
@@ -26,7 +28,7 @@ public class LoginRegisterMenu : MonoBehaviour
             int playerId = PlayerPrefs.GetInt("PlayerID");
             UsernameText.text = DatabaseManager.GetPlayerUsername(playerId);
 
-            //DataTable scores = DatabaseManager.GetPlayerScores(playerId);
+            List<ScoreSum> scoreSums = DatabaseManager.GetPlayerScoreSum(playerId);
 
             // Clear the table
             foreach (Transform child in TableContainer)
@@ -35,12 +37,14 @@ public class LoginRegisterMenu : MonoBehaviour
             }
 
             // Add a new row for each score
-            /*foreach (DataRow row in scores.Rows)
+            foreach (ScoreSum scoreSum in scoreSums)
             {
                 GameObject tableRow = Instantiate(TableRowPrefab, TableContainer);
-                Text scoreText = tableRow.GetComponentInChildren<Text>();
-                scoreText.text = "Points: " + row["points"];
-            }*/
+                TextMeshProUGUI scoreText = tableRow.transform.Find("Score").GetComponent<TextMeshProUGUI>();
+                TextMeshProUGUI dateText = tableRow.transform.Find("Date").GetComponent<TextMeshProUGUI>();
+                scoreText.text = "Score: " + scoreSum.TotalScore;
+                dateText.text = "" + scoreSum.Date.ToString("yyyy-MM-dd");;
+            }
         }
         else
         {

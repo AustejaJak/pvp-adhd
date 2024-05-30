@@ -77,7 +77,7 @@ public class GameEvents : MonoBehaviour
             int time = sceneTimerInstance.GetTotalSeconds();
             if(sceneTimerInstance && globalManagerInstance)
             {
-                globalManagerInstance.AddScore((int)((8-(5.0*time/60.0)-(0.5*missclicks))*(10.0/8.0)));
+                globalManagerInstance.AddScore((int)((8-(5.0*time/60.0)-(0.5*missclicks))*(10.0/8.0)*10));
                 globalManagerInstance.AddPoints(time);
                 globalManagerInstance.AddError(missclicks);
                 globalManagerInstance.AddScene(SceneManager.GetActiveScene().name);

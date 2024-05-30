@@ -46,7 +46,7 @@ public class SceneControllerFeeding : MonoBehaviour
             if (globalManagerInstance)
             {
                 int errors = int.Parse(ErrorLabel.text.Split(':')[1].Trim());
-                globalManagerInstance.AddScore((int)((currentLevel-(0.25*errors))*(10.0/8.0)));
+                globalManagerInstance.AddScore((int)((currentLevel-(0.25*errors))*(10.0/8.0)*10));
                 globalManagerInstance.AddPoints(currentLevel);
                 globalManagerInstance.AddError(errors);
                 globalManagerInstance.AddScene(SceneManager.GetActiveScene().name);
@@ -64,7 +64,7 @@ public class SceneControllerFeeding : MonoBehaviour
                 if (globalManagerInstance)
                 {
                     int errors = int.Parse(ErrorLabel.text.Split(':')[1].Trim());
-                    globalManagerInstance.AddScore((int)((currentLevel-(0.25*errors))*(10.0/8.0)));
+                    globalManagerInstance.AddScore((int)((currentLevel-(0.25*errors))*(10.0/8.0)*10));
                     globalManagerInstance.AddPoints(currentLevel);
                     globalManagerInstance.AddError(errors);
                     globalManagerInstance.AddScene(SceneManager.GetActiveScene().name);

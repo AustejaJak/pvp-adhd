@@ -45,6 +45,9 @@ public class RegisterUser : MonoBehaviour
 
         if(DBManager.RegisterUser(username, password, age))
         {  
+            usernameField.text = "";
+            passwordField.text = "";
+            ageField.text = "";
             gameObject.SetActive(false);
             errorMessage.SetActive(false);
             Debug.Log("User registered: " + username);
