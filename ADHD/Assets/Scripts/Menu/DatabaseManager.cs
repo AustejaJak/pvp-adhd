@@ -761,6 +761,54 @@ public class DatabaseManager : MonoBehaviour
 
         return ageLimit;
     }
+
+    public double GetBetterThanScorePercentage(int score)
+    {
+        double total_rows = 0;
+        double filtered_rows = 0;
+        try
+        {
+            OpenConnection();
+
+            using MySqlCommand cmd = _connection.CreateCommand();
+            cmd.CommandText =
+                @"SELECT 
+                    COUNT(*) AS total_rows,
+                    SUM(CASE WHEN total_score < @score THEN 1 ELSE 0 END) AS filtered_rows
+                FROM (
+                    SELECT (
+                        COALESCE(concentrationScore, 0) +
+                        COALESCE(destinationScore, 0) +
+                        COALESCE(dualnBackScore, 0) +
+                        COALESCE(feedingScore, 0) +
+                        COALESCE(swipeScore, 0) +
+                        COALESCE(matrixScore, 0) +
+                        COALESCE(sequenceScore, 0) +
+                        COALESCE(shadowScore, 0) +
+                        COALESCE(textColorScore, 0)
+                    ) AS total_score
+                    FROM games
+                ) AS subquery;";
+            cmd.Parameters.AddWithValue("@score", score);
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+            List<ScoreSum> scoreSums = new List<ScoreSum>();
+
+            while (reader.Read())
+            {
+                total_rows = reader.GetDouble("total_rows");
+                filtered_rows = reader.GetDouble("filtered_rows");
+            }
+            reader.Close();
+            CloseConnection();
+            return filtered_rows/total_rows;
+        }
+        catch (Exception ex)
+        {
+            Debug.Log("Error getting better percentage: " + ex.Message);
+            return -1;
+        }
+    }
 }
 
 
