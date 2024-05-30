@@ -729,7 +729,7 @@ public class DatabaseManager : MonoBehaviour
         }
     }
 
-    private List<int> AgeLimit(int age)
+    public List<int> AgeLimit(int age)
     {
         List<int> ageLimit = new List<int>();
 
