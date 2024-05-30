@@ -13,6 +13,7 @@ public class LoginRegisterMenu : MonoBehaviour
     public GameObject RegisterButton;
     public GameObject LogoutButton;
     public GameObject TableRowPrefab; // Prefab for a table row
+    public GameObject Table;
     public Transform TableContainer; // Parent transform for the table rows
     public DatabaseManager DatabaseManager;
     public TextMeshProUGUI UsernameText; // UI Text component for displaying the username
@@ -24,6 +25,7 @@ public class LoginRegisterMenu : MonoBehaviour
             LogoutButton.SetActive(true);
             RegisterButton.SetActive(false);
             LoginButton.SetActive(false);
+            Table.SetActive(true);
 
             int playerId = PlayerPrefs.GetInt("PlayerID");
             UsernameText.text = DatabaseManager.GetPlayerUsername(playerId);
@@ -51,6 +53,7 @@ public class LoginRegisterMenu : MonoBehaviour
             LogoutButton.SetActive(false);
             RegisterButton.SetActive(true);
             LoginButton.SetActive(true);
+            Table.SetActive(false);
         }
     }
 

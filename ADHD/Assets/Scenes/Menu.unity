@@ -3345,6 +3345,7 @@ MonoBehaviour:
   RegisterButton: {fileID: 405056220}
   LogoutButton: {fileID: 1517013506}
   TableRowPrefab: {fileID: 1165669718151264396, guid: da92db7bb57757a48bac32b75bc6f147, type: 3}
+  Table: {fileID: 1208982871}
   TableContainer: {fileID: 1217977533}
   DatabaseManager: {fileID: 786024479}
   UsernameText: {fileID: 401278627}
@@ -10165,13 +10166,13 @@ MonoBehaviour:
       - m_Target: {fileID: 1840398240}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
         m_MethodName: SwitchScene
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: ShadowGame
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1840398238

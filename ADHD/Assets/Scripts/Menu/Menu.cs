@@ -21,10 +21,10 @@ public class Menu : MonoBehaviour
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
-    public void SwitchScene(string sceneName)
+    public void SwitchScene()
     {
         audioManager.PlaySFX(audioManager.buttonClick);
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     private void CreateSaveFile(string savePath)

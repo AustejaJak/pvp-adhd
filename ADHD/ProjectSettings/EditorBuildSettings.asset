@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/ShadowGame.unity
     guid: 3d160d2203002dd4b8d3712bec96e2c2
   - enabled: 1
+    path: Assets/Scenes/MemoryMatrix.unity
+    guid: e551fdfef5ec5e94faa41c542cfb7668
+  - enabled: 1
     path: Assets/Scenes/Destination.unity
     guid: bd761f56f9393dd4f8910f1362ae9a5c
   - enabled: 1
@@ -29,9 +32,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TextColor.unity
     guid: 72bdd813b941b1c42b90d8a825a99d68
-  - enabled: 1
-    path: Assets/Scenes/MemoryMatrix.unity
-    guid: e551fdfef5ec5e94faa41c542cfb7668
   - enabled: 1
     path: Assets/Scenes/EndScene.unity
     guid: d242697f4c235174cbe132230fea6d65
